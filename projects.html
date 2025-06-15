@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | ADITYA SINGHAL - AI & ML Engineer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cursor elements -->
+  <div class="cursor-follower"></div>
+  <div class="cursor-dot"></div>
+  
+  <!-- Background elements -->
+  <div class="noise-overlay"></div>
+  <div class="gradient-bg" data-page="projects"></div>
+  <canvas id="particleCanvas"></canvas>
+  
+  <!-- Loading screen -->
+  <div class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-text">INITIALIZING</div>
+      <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+      </div>
+      <div class="loading-percentage">0%</div>
+    </div>
+  </div>
+
+  <!-- Main content wrapper -->
+  <div class="page-wrapper">
+    <!-- Projects section -->
+    <section id="projects" class="scene active">
+      <div class="scene-content">
+        <h2 class="section-title">PROJECTS & CERTIFICATES</h2>
+        
+        <div class="projects-grid">
+          <div class="project-card" data-project="sentiment">
+            <div class="project-visual">
+              <canvas class="project-canvas" data-visualization="sentiment"></canvas>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">SENTIMENT ANALYSIS</h3>
+              <div class="project-tags">
+                <span>BERT</span>
+                <span>NLP</span>
+                <span>AWS</span>
+                <span>FastAPI</span>
+              </div>
+              <p class="project-description">Real-time sentiment analysis system using BERT transformers, deployed on AWS with 99.2% accuracy for social media monitoring.</p>
+              <div class="project-link" data-link="sentiment">EXPLORE PROJECT</div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-project="object-detection">
+            <div class="project-visual">
+              <canvas class="project-canvas" data-visualization="object-detection"></canvas>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">OBJECT DETECTION SYSTEM</h3>
+              <div class="project-tags">
+                <span>YOLO</span>
+                <span>OpenCV</span>
+                <span>PyTorch</span>
+                <span>Edge AI</span>
+              </div>
+              <p class="project-description">Real-time object detection and tracking system using YOLO v8 for autonomous vehicle applications with edge computing optimization.</p>
+              <div class="project-link" data-link="object-detection">EXPLORE PROJECT</div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-project="document-analyzer">
+            <div class="project-visual">
+              <canvas class="project-canvas" data-visualization="document-analyzer"></canvas>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">AI-DOCUMENT-ANALYZER</h3>
+              <div class="project-tags">
+                <span>GPT-4</span>
+                <span>FastAPI</span>
+                <span>Vector DB</span>
+                <span>Streamlit</span>
+              </div>
+              <p class="project-description">A responsive, AI-powered document research chatbot system built with Next.js and GPT-4, featuring semantic search, theme analysis, and real-time document processing.</p>
+              <div class="project-link" data-link="document-analyzer">EXPLORE PROJECT</div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-project="stock-prediction">
+            <div class="project-visual">
+              <canvas class="project-canvas" data-visualization="stock-prediction"></canvas>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">STOCK PRICE PREDICTION</h3>
+              <div class="project-tags">
+                <span>LSTM</span>
+                <span>Time Series</span>
+                <span>Finance</span>
+                <span>Prediction</span>
+              </div>
+              <p class="project-description">LSTM-based time series model for stock price prediction with technical indicators and sentiment analysis integration.</p>
+              <div class="project-link" data-link="stock-prediction">EXPLORE PROJECT</div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-project="wave-energy">
+            <div class="project-visual">
+              <canvas class="project-canvas" data-visualization="wave-energy"></canvas>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">WAVE ENERGY CONVERTER</h3>
+              <div class="project-tags">
+                <span>Predictive Analysis</span>
+                <span>Fault Detection</span>
+                <span>Keras</span>
+                <span>Scikit-learn</span>
+              </div>
+              <p class="project-description">Engineered a Wave Energy Converter utilizing machine learning algorithms, increasing energy capture efficiency by 15% and reducing maintenance costs through automated fault detection.</p>
+              <div class="project-link" data-link="wave-energy">EXPLORE PROJECT</div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-project="gender-age">
+            <div class="project-visual">
+              <canvas class="project-canvas" data-visualization="gender-age"></canvas>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">GENDER AND AGE DETECTION</h3>
+              <div class="project-tags">
+                <span>Computer Vision</span>
+                <span>CNN</span>
+                <span>Deep Learning</span>
+                <span>OpenCV</span>
+              </div>
+              <p class="project-description">Advanced computer vision system for real-time gender and age detection using convolutional neural networks with high accuracy across diverse demographics.</p>
+              <div class="project-link" data-link="gender-age">EXPLORE PROJECT</div>
+            </div>
+          </div>
+
+          <div class="project-card" data-project="speech-emotion">
+            <div class="project-visual">
+              <canvas class="project-canvas" data-visualization="speech-emotion"></canvas>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">SPEECH EMOTION RECOGNITION</h3>
+              <div class="project-tags">
+                <span>Audio Processing</span>
+                <span>Deep Learning</span>
+                <span>MFCC</span>
+                <span>CNN</span>
+              </div>
+              <p class="project-description">Advanced speech emotion recognition system using deep learning to classify emotions from audio signals with MFCC feature extraction and convolutional neural networks.</p>
+              <div class="project-link" data-link="speech-emotion">EXPLORE PROJECT</div>
+            </div>
+          </div>
+
+          <div class="project-card" data-project="nltk-chatbot">
+            <div class="project-visual">
+              <canvas class="project-canvas" data-visualization="nltk-chatbot"></canvas>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">SIMPLE CHATBOT USING NLTK</h3>
+              <div class="project-tags">
+                <span>NLTK</span>
+                <span>NLP</span>
+                <span>Python</span>
+                <span>Text Processing</span>
+              </div>
+              <p class="project-description">Intelligent conversational chatbot built with NLTK library featuring natural language processing, tokenization, and pattern matching for human-like interactions.</p>
+              <div class="project-link" data-link="nltk-chatbot">EXPLORE PROJECT</div>
+            </div>
+          </div>
+        </div>
+        
+        <h3 class="subsection-title">CERTIFICATES & ACHIEVEMENTS</h3>
+        <div class="certificates-container">
+          <div class="certificate-item">
+            <div class="certificate-icon"></div>
+            <div class="certificate-info">
+              <div class="certificate-name">Introduction To Internet Of Things</div>
+              <div class="certificate-issuer">NPTEL</div>
+              <div class="certificate-date">2025</div>
+            </div>
+          </div>
+          
+          <div class="certificate-item">
+            <div class="certificate-icon"></div>
+            <div class="certificate-info">
+              <div class="certificate-name">AI and Machine Learning</div>
+              <div class="certificate-issuer">Board Infinity</div>
+              <div class="certificate-date">2024</div>
+            </div>
+          </div>
+          
+          <div class="certificate-item">
+            <div class="certificate-icon"></div>
+            <div class="certificate-info">
+              <div class="certificate-name">C++ Specialization</div>
+              <div class="certificate-issuer">Coursera</div>
+              <div class="certificate-date">2023</div>
+            </div>
+          </div>
+          
+          <div class="certificate-item">
+            <div class="certificate-icon"></div>
+            <div class="certificate-info">
+              <div class="certificate-name">Competitive Programming</div>
+              <div class="certificate-issuer">Cipher Schools</div>
+              <div class="certificate-date">2025</div>
+            </div>
+          </div>
+          
+          <div class="certificate-item">
+            <div class="certificate-icon"></div>
+            <div class="certificate-info">
+              <div class="certificate-name">Automation Developer Associate Training</div>
+              <div class="certificate-issuer">ICT Academy (UIPath)</div>
+              <div class="certificate-date">2025</div>
+            </div>
+          </div>
+        </div>
+                
+        <div class="github-activity">
+          <h3 class="activity-title">GITHUB ACTIVITY</h3>
+          <div class="github-heatmap" id="githubHeatmap"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Radial navigation -->
+  <div class="radial-nav">
+    <div class="nav-toggle">
+      <div class="nav-toggle-icon"></div>
+    </div>
+    <div class="nav-menu">
+      <a href="index.html" class="nav-item" data-page="home">HOME</a>
+      <a href="about.html" class="nav-item" data-page="about">ABOUT</a>
+      <a href="projects.html" class="nav-item active" data-page="projects">PROJECTS</a>
+      <a href="skills.html" class="nav-item" data-page="skills">SKILLS</a>
+      <a href="contact.html" class="nav-item" data-page="contact">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Project detail modal -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+      <div class="modal-close">&times;</div>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Audio controls -->
+  <div class="audio-control">
+    <div class="audio-icon"></div>
+    <div class="audio-line"></div>
+  </div>
+
+  <!-- Voice command indicator -->
+  <div class="voice-command">
+    <div class="voice-icon"></div>
+    <div class="voice-text">Say "Navigate to [page]" to use voice commands</div>
+  </div>
+
+  <!-- Page transition overlay -->
+  <div class="page-transition"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

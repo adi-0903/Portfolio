@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | ADITYA SINGHAL - AI & ML Engineer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cursor elements -->
+  <div class="cursor-follower"></div>
+  <div class="cursor-dot"></div>
+  
+  <!-- Background elements -->
+  <div class="noise-overlay"></div>
+  <div class="gradient-bg" data-page="contact"></div>
+  <canvas id="particleCanvas"></canvas>
+  
+  <!-- Loading screen -->
+  <div class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-text">INITIALIZING</div>
+      <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+      </div>
+      <div class="loading-percentage">0%</div>
+    </div>
+  </div>
+
+  <!-- Main content wrapper -->
+  <div class="page-wrapper">
+    <!-- Contact section -->
+    <section id="contact" class="scene active">
+      <div class="scene-content">
+        <h2 class="section-title">NEURAL LINK</h2>
+        <p class="contact-intro">Available for strategic collaborations, advisory roles, and advanced AI initiatives that demand technical depth and innovation. Let’s connect to drive measurable impact.</p>
+        
+        <div class="contact-grid">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" class="form-input" required>
+              <label for="name" class="form-label">NAME</label>
+              <div class="input-line"></div>
+            </div>
+            
+            <div class="form-group">
+              <input type="email" id="email" class="form-input" required>
+              <label for="email" class="form-label">EMAIL</label>
+              <div class="input-line"></div>
+            </div>
+            
+            <div class="form-group">
+              <textarea id="message" class="form-input form-textarea" required></textarea>
+              <label for="message" class="form-label">MESSAGE</label>
+              <div class="input-line"></div>
+            </div>
+            
+            <button type="submit" class="submit-button">
+              <span class="button-text">TRANSMIT</span>
+              <span class="button-icon"></span>
+            </button>
+          </form>
+          
+          <div class="contact-info">
+            <div class="contact-method">
+              <div class="contact-icon email-icon"></div>
+              <div class="contact-detail">
+                <div class="contact-label">EMAIL</div>
+                <div class="contact-value">singhaladitya617@gmail.com</div>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon location-icon"></div>
+              <div class="contact-detail">
+                <div class="contact-label">LOCATION</div>
+                <div class="contact-value">Ludhiana,Punjab IN</div>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon availability-icon"></div>
+              <div class="contact-detail">
+                <div class="contact-label">AVAILABILITY</div>
+                <div class="contact-value">Open to collaborations</div>
+              </div>
+            </div>
+            
+            <div class="social-links">
+              <a href="https://github.com/adi-0903" class="social-link" data-platform="github">GITHUB</a>
+              <a href="https://www.linkedin.com/in/aditya1803/" class="social-link" data-platform="linkedin">LINKEDIN</a>
+              <a href="https://x.com/adityas15692724" class="social-link" data-platform="twitter">TWITTER</a>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Radial navigation -->
+  <div class="radial-nav">
+    <div class="nav-toggle">
+      <div class="nav-toggle-icon"></div>
+    </div>
+    <div class="nav-menu">
+      <a href="index.html" class="nav-item" data-page="home">HOME</a>
+      <a href="about.html" class="nav-item" data-page="about">ABOUT</a>
+      <a href="projects.html" class="nav-item" data-page="projects">PROJECTS</a>
+      <a href="skills.html" class="nav-item" data-page="skills">SKILLS</a>
+      <a href="contact.html" class="nav-item active" data-page="contact">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Audio controls -->
+  <div class="audio-control">
+    <div class="audio-icon"></div>
+    <div class="audio-line"></div>
+  </div>
+
+  <!-- Voice command indicator -->
+  <div class="voice-command">
+    <div class="voice-icon"></div>
+    <div class="voice-text">Say "Navigate to [page]" to use voice commands</div>
+  </div>
+
+  <!-- Page transition overlay -->
+  <div class="page-transition"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

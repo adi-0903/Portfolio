@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | ADITYA SINGHAL - AI & ML Engineer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cursor elements -->
+  <div class="cursor-follower"></div>
+  <div class="cursor-dot"></div>
+  
+  <!-- Background elements -->
+  <div class="noise-overlay"></div>
+  <div class="gradient-bg" data-page="about"></div>
+  <canvas id="particleCanvas"></canvas>
+  
+  <!-- Loading screen -->
+  <div class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-text">INITIALIZING</div>
+      <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+      </div>
+      <div class="loading-percentage">0%</div>
+    </div>
+  </div>
+
+  <!-- Main content wrapper -->
+  <div class="page-wrapper">
+    <!-- About section -->
+    <section id="about" class="scene active">
+      <div class="scene-content">
+        <h2 class="section-title">THE ARCHITECT</h2>
+        
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I transform complex data into meaningful experiences through advanced machine learning algorithms and creative problem-solving.</p>
+            <p>With expertise in neural networks, computer vision, and natural language processing, I build systems that learn, adapt, and evolve.</p>
+            <p>My journey began at the intersection of mathematics and computer science, evolving into a passion for creating AI systems that enhance human capabilities rather than replace them.</p>
+            <p>I believe in responsible AI development that prioritizes transparency, fairness, and human-centered design principles.</p>
+          </div>
+          
+          <div class="about-stats">
+            <div class="stat-item">
+              <div class="stat-value">1</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">15+</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">3</div>
+              <div class="stat-label">Research Papers</div>
+            </div>
+          </div>
+        </div>
+        
+        <h3 class="subsection-title">EDUCATION</h3>
+        <div class="education-container">
+          <div class="education-item">
+            <div class="education-year">2022 - 2026</div>
+            <div class="education-degree">B.Tech CSE (AI and Machine Learning)</div>
+            <div class="education-institution">Lovely Professional University</div>
+          </div>
+          <div class="education-item">
+            <div class="education-year">2021 - 2022</div>
+            <div class="education-degree">Intermediate (Science)</div>
+            <div class="education-institution">Ryan International School</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Radial navigation -->
+  <div class="radial-nav">
+    <div class="nav-toggle">
+      <div class="nav-toggle-icon"></div>
+    </div>
+    <div class="nav-menu">
+      <a href="index.html" class="nav-item" data-page="home">HOME</a>
+      <a href="about.html" class="nav-item active" data-page="about">ABOUT</a>
+      <a href="projects.html" class="nav-item" data-page="projects">PROJECTS</a>
+      <a href="skills.html" class="nav-item" data-page="skills">SKILLS</a>
+      <a href="contact.html" class="nav-item" data-page="contact">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Audio controls -->
+  <div class="audio-control">
+    <div class="audio-icon"></div>
+    <div class="audio-line"></div>
+  </div>
+
+  <!-- Voice command indicator -->
+  <div class="voice-command">
+    <div class="voice-icon"></div>
+    <div class="voice-text">Say "Navigate to [page]" to use voice commands</div>
+  </div>
+
+  <!-- Page transition overlay -->
+  <div class="page-transition"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | ADITYA SINGHAL - AI & ML Engineer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cursor elements -->
+  <div class="cursor-follower"></div>
+  <div class="cursor-dot"></div>
+  
+  <!-- Background elements -->
+  <div class="noise-overlay"></div>
+  <div class="gradient-bg" data-page="skills"></div>
+  <canvas id="particleCanvas"></canvas>
+  
+  <!-- Loading screen -->
+  <div class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-text">INITIALIZING</div>
+      <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+      </div>
+      <div class="loading-percentage">0%</div>
+    </div>
+  </div>
+
+  <!-- Main content wrapper -->
+  <div class="page-wrapper">
+    <!-- Skills section -->
+    <section id="skills" class="scene active">
+      <div class="scene-content">
+        <h2 class="section-title">TECHNICAL EXPERTISE</h2>
+        
+        <div class="skills-section">
+          <div class="skills-category">
+            <div class="category-header">
+              <div class="category-icon">💻</div>
+              <h4 class="category-title">Languages & Tools</h4>
+            </div>
+            <div class="skill-container">
+              <div class="skill-item" data-skill="Python">
+                <div class="skill-progress" data-progress="98"></div>
+              </div>
+              <div class="skill-item" data-skill="C++">
+                <div class="skill-progress" data-progress="85"></div>
+              </div>
+              <div class="skill-item" data-skill="Java">
+                <div class="skill-progress" data-progress="80"></div>
+              </div>
+              <div class="skill-item" data-skill="SQL">
+                <div class="skill-progress" data-progress="92"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <div class="category-header">
+              <div class="category-icon">🤖</div>
+              <h4 class="category-title">ML/AI Frameworks</h4>
+            </div>
+            <div class="skill-container">
+              <div class="skill-item" data-skill="TensorFlow">
+                <div class="skill-progress" data-progress="85"></div>
+              </div>
+              <div class="skill-item" data-skill="PyTorch">
+                <div class="skill-progress" data-progress="80"></div>
+              </div>
+              <div class="skill-item" data-skill="Scikit-learn">
+                <div class="skill-progress" data-progress="90"></div>
+              </div>
+              <div class="skill-item" data-skill="Keras">
+                <div class="skill-progress" data-progress="83"></div>
+              </div>
+              <div class="skill-item" data-skill="NLTK">
+                <div class="skill-progress" data-progress="85"></div>
+              </div>
+              <div class="skill-item" data-skill="OpenCV">
+                <div class="skill-progress" data-progress="87"></div>
+              </div>
+              <div class="skill-item" data-skill="Hugging Face">
+                <div class="skill-progress" data-progress="82"></div>
+              </div>
+              <div class="skill-item" data-skill="LangChain">
+                <div class="skill-progress" data-progress="78"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <div class="category-header">
+              <div class="category-icon">📊</div>
+              <h4 class="category-title">Data Science</h4>
+            </div>
+            <div class="skill-container">
+              <div class="skill-item" data-skill="NumPy">
+                <div class="skill-progress" data-progress="96"></div>
+              </div>
+              <div class="skill-item" data-skill="Pandas">
+                <div class="skill-progress" data-progress="94"></div>
+              </div>
+              <div class="skill-item" data-skill="Matplotlib">
+                <div class="skill-progress" data-progress="90"></div>
+              </div>
+              <div class="skill-item" data-skill="Seaborn">
+                <div class="skill-progress" data-progress="88"></div>
+              </div>
+              <div class="skill-item" data-skill="Statistical Analysis">
+                <div class="skill-progress" data-progress="91"></div>
+              </div>
+              <div class="skill-item" data-skill="Data Visualization">
+                <div class="skill-progress" data-progress="89"></div>
+              </div>
+              <div class="skill-item" data-skill="Feature Engineering">
+                <div class="skill-progress" data-progress="93"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <div class="category-header">
+              <div class="category-icon">🧠</div>
+              <h4 class="category-title">ML/AI Domains</h4>
+            </div>
+            <div class="skill-container">
+              <div class="skill-item" data-skill="Deep Learning">
+                <div class="skill-progress" data-progress="85"></div>
+              </div>
+              <div class="skill-item" data-skill="Natural Language Processing">
+                <div class="skill-progress" data-progress="88"></div>
+              </div>
+              <div class="skill-item" data-skill="Computer Vision">
+                <div class="skill-progress" data-progress="90"></div>
+              </div>
+              <div class="skill-item" data-skill="Supervised Learning">
+                <div class="skill-progress" data-progress="94"></div>
+              </div>
+              <div class="skill-item" data-skill="Unsupervised Learning">
+                <div class="skill-progress" data-progress="87"></div>
+              </div>
+              <div class="skill-item" data-skill="Reinforcement Learning">
+                <div class="skill-progress" data-progress="82"></div>
+              </div>
+              <div class="skill-item" data-skill="Time Series Analysis">
+                <div class="skill-progress" data-progress="85"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <div class="category-header">
+              <div class="category-icon">☁️</div>
+              <h4 class="category-title">Cloud & Big Data</h4>
+            </div>
+            <div class="skill-container">
+              <div class="skill-item" data-skill="QML">
+                <div class="skill-progress" data-progress="65"></div>
+              </div>
+              <div class="skill-item" data-skill="Spark ML">
+                <div class="skill-progress" data-progress="70"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-summary">
+          <h3 class="subsection-title">SKILL OVERVIEW</h3>
+          <p class="skill-description">
+            With over 5 years of experience in AI and machine learning, I've developed expertise across multiple domains and technologies. My strongest skills are in Python development, data science fundamentals, and deep learning applications. I continuously expand my knowledge through research, practical implementation, and staying current with emerging technologies in the field.
+          </p>
+          
+          <div class="skill-stats">
+            <div class="stat-item">
+              <div class="stat-value">15+</div>
+              <div class="stat-label">Technologies Mastered</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">3</div>
+              <div class="stat-label">Research Papers</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">15+</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Radial navigation -->
+  <div class="radial-nav">
+    <div class="nav-toggle">
+      <div class="nav-toggle-icon"></div>
+    </div>
+    <div class="nav-menu">
+      <a href="index.html" class="nav-item" data-page="home">HOME</a>
+      <a href="about.html" class="nav-item" data-page="about">ABOUT</a>
+      <a href="projects.html" class="nav-item" data-page="projects">PROJECTS</a>
+      <a href="skills.html" class="nav-item active" data-page="skills">SKILLS</a>
+      <a href="contact.html" class="nav-item" data-page="contact">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Audio controls -->
+  <div class="audio-control">
+    <div class="audio-icon"></div>
+    <div class="audio-line"></div>
+  </div>
+
+  <!-- Voice command indicator -->
+  <div class="voice-command">
+    <div class="voice-icon"></div>
+    <div class="voice-text">Say "Navigate to [page]" to use voice commands</div>
+  </div>
+
+  <!-- Page transition overlay -->
+  <div class="page-transition"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
