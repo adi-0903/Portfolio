@@ -513,6 +513,206 @@
   if (heroFlipToggle) heroFlipToggle.addEventListener('click', toggleFlipAll);
   if (flipAllBtn) flipAllBtn.addEventListener('click', toggleFlipAll);
 
+  // ── Parchment Manuscript Dossier Interactive Controller ─────
+  const expParchments = document.querySelectorAll('.exp-parchment');
+  expParchments.forEach((parchment) => {
+    const baseRot = parseFloat(parchment.dataset.baseRot) || 0;
+    const glare = parchment.querySelector('.parchment-glare');
+    const waxSeal = parchment.querySelector('.parchment-wax-seal');
+
+    // Tactile Audio on Hover
+    parchment.addEventListener('mouseenter', () => {
+      playPaperRustle();
+    });
+
+    // 3D Tilt Physics (mouse pointer)
+    if (window.matchMedia('(pointer: fine)').matches) {
+      parchment.addEventListener('mousemove', (e) => {
+        const rect = parchment.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+
+        const xNorm = (mouseX / rect.width) - 0.5;
+        const yNorm = (mouseY / rect.height) - 0.5;
+
+        const rotX = -yNorm * 9;
+        const rotY = (xNorm * 9) + (baseRot * 0.4);
+
+        parchment.style.transform = `translateY(-8px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(24px) scale(1.008)`;
+
+        if (glare) {
+          const glareX = (mouseX / rect.width) * 100;
+          const glareY = (mouseY / rect.height) * 100;
+          glare.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255, 255, 255, 0.45) 0%, transparent 60%)`;
+          glare.style.opacity = '0.75';
+        }
+      });
+
+      parchment.addEventListener('mouseleave', () => {
+        parchment.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease';
+        parchment.style.transform = '';
+        if (glare) glare.style.opacity = '0.5';
+        setTimeout(() => {
+          parchment.style.transition = '';
+        }, 500);
+      });
+    }
+
+    // Wax Seal Impact Stamp Interaction
+    if (waxSeal) {
+      function triggerWaxSealImpact(e) {
+        e.stopPropagation();
+        playStampImpact();
+        waxSeal.animate([
+          { transform: 'scale(1) rotate(-5deg)' },
+          { transform: 'scale(0.88) rotate(-10deg)', offset: 0.3 },
+          { transform: 'scale(1.15) rotate(4deg)', offset: 0.6 },
+          { transform: 'scale(1) rotate(0deg)', offset: 1.0 }
+        ], {
+          duration: 420,
+          easing: 'cubic-bezier(0.34, 1.4, 0.64, 1)'
+        });
+      }
+
+      waxSeal.addEventListener('click', triggerWaxSealImpact);
+      waxSeal.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          triggerWaxSealImpact(e);
+        }
+      });
+    }
+  });
+
+  // ── Tactile Engineer Passport 3D Tilt & Holographic Foil Controller ──
+  const engineerPassport = document.getElementById('engineer-passport');
+  const holoSeal = document.getElementById('passport-holo-seal');
+  const holoShimmer = holoSeal ? holoSeal.querySelector('.holo-seal__shimmer') : null;
+
+  if (engineerPassport && window.matchMedia('(pointer: fine)').matches) {
+    engineerPassport.addEventListener('mouseenter', () => {
+      playPaperRustle();
+    });
+
+    engineerPassport.addEventListener('mousemove', (e) => {
+      const rect = engineerPassport.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
+
+      const xNorm = (mouseX / rect.width) - 0.5;
+      const yNorm = (mouseY / rect.height) - 0.5;
+
+      const rotX = -yNorm * 10;
+      const rotY = (xNorm * 10) - 1.2;
+
+      engineerPassport.style.transform = `translateY(-6px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(22px) scale(1.01)`;
+
+      // Dynamic Holographic Iridescent Reflection angle
+      if (holoShimmer) {
+        const angle = Math.round(140 + (xNorm * 180) + (yNorm * 90));
+        holoShimmer.style.background = `conic-gradient(from ${angle}deg at 50% 50%, #ffc0cb 0deg, #ffe4b5 60deg, #e6e6fa 120deg, #afeeee 180deg, #ffdab9 240deg, #e0ffff 300deg, #ffc0cb 360deg)`;
+      }
+    });
+
+    engineerPassport.addEventListener('mouseleave', () => {
+      engineerPassport.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease';
+      engineerPassport.style.transform = '';
+      setTimeout(() => {
+        engineerPassport.style.transition = '';
+      }, 500);
+    });
+  }
+
+  // Holographic Seal Interactive Impact Stamp
+  if (holoSeal) {
+    holoSeal.addEventListener('click', (e) => {
+      e.stopPropagation();
+      playStampImpact();
+      holoSeal.animate([
+        { transform: 'scale(1) rotate(0deg)' },
+        { transform: 'scale(0.85) rotate(-12deg)', offset: 0.3 },
+        { transform: 'scale(1.18) rotate(8deg)', offset: 0.65 },
+        { transform: 'scale(1) rotate(0deg)', offset: 1.0 }
+      ], {
+        duration: 450,
+        easing: 'cubic-bezier(0.34, 1.4, 0.64, 1)'
+      });
+    });
+  }
+
+  // ── Project-Linked Skills HUD Controller ─────────────────────
+  const skillTags = document.querySelectorAll('.skill-tag[data-project]');
+  const linkageHudBody = document.getElementById('linkage-hud-body');
+
+  skillTags.forEach((tag) => {
+    tag.addEventListener('mouseenter', () => {
+      playPaperRustle();
+      tag.classList.add('is-linked-active');
+      const project = tag.dataset.project || '';
+      const role = tag.dataset.role || '';
+      const skillName = tag.textContent.trim();
+
+      if (linkageHudBody) {
+        linkageHudBody.innerHTML = `
+          <div class="linkage-active-pill">
+            <span class="linkage-tech"><strong>${skillName}</strong></span>
+            <span class="linkage-arrow">&rarr;</span>
+            <span class="linkage-project">${project}</span>
+            ${role ? `<span class="linkage-role">&bull; ${role}</span>` : ''}
+          </div>
+        `;
+      }
+    });
+
+    tag.addEventListener('mouseleave', () => {
+      tag.classList.remove('is-linked-active');
+      if (linkageHudBody) {
+        linkageHudBody.innerHTML = `
+          <span class="linkage-hint">Hover any technology tag below to see where it was deployed in production or projects &rarr;</span>
+        `;
+      }
+    });
+
+    // Optional Quick Navigation: Click skill to view relevant project or experience
+    tag.addEventListener('click', () => {
+      playPaperRustle();
+      const project = (tag.dataset.project || '').toLowerCase();
+      let targetEl = null;
+
+      if (project.includes('mentiq')) {
+        targetEl = document.getElementById('postcard-wrap-1');
+      } else if (project.includes('kisan')) {
+        targetEl = document.getElementById('postcard-wrap-2');
+      } else if (project.includes('netpy')) {
+        targetEl = document.getElementById('dossier-netpy');
+      } else if (project.includes('drone') || project.includes('parking')) {
+        targetEl = document.getElementById('postcard-wrap-4');
+      } else if (project.includes('teevra')) {
+        targetEl = document.getElementById('dossier-teevra');
+      } else if (project.includes('mind matrix')) {
+        targetEl = document.getElementById('postcard-wrap-3');
+      }
+
+      if (targetEl) {
+        const navHeight = nav ? nav.offsetHeight : 76;
+        const targetPos = targetEl.getBoundingClientRect().top + window.scrollY - navHeight;
+        window.scrollTo({
+          top: targetPos,
+          behavior: 'smooth'
+        });
+
+        // Highlight flash on target
+        targetEl.style.transition = 'outline 0.3s ease, transform 0.3s ease';
+        targetEl.style.outline = '2px solid var(--color-accent)';
+        targetEl.style.outlineOffset = '6px';
+        setTimeout(() => {
+          targetEl.style.outline = '';
+          targetEl.style.outlineOffset = '';
+        }, 1600);
+      }
+    });
+  });
+
   // ── Filter Gallery ──────────────────────────────────────────
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -869,8 +1069,93 @@
       isDragging = false;
     });
   }
+  // ── 3D Architectural Blueprint Cards Controller ─────────────
+  const serviceWraps = document.querySelectorAll('.service-3d-wrap');
 
+  serviceWraps.forEach((wrap) => {
+    const card = wrap.querySelector('.service-3d-card');
+    if (!card) return;
 
+    const flipBtns = wrap.querySelectorAll('.service-flip-btn');
+
+    function toggleServiceFlip() {
+      const willBeFlipped = !card.classList.contains('is-flipped');
+      card.classList.toggle('is-flipped');
+
+      if (typeof playStampImpact === 'function') {
+        playStampImpact();
+      }
+      if (typeof playPaperRustle === 'function') {
+        setTimeout(playPaperRustle, 100);
+      }
+
+      card.style.transition = 'transform 0.75s cubic-bezier(0.34, 1.4, 0.64, 1), box-shadow 0.4s ease';
+      card.style.transform = willBeFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
+      setTimeout(() => {
+        card.style.transition = '';
+      }, 750);
+    }
+
+    flipBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleServiceFlip();
+      });
+    });
+
+    // Keyboard accessibility for card
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        if (e.target === card) {
+          e.preventDefault();
+          toggleServiceFlip();
+        }
+      }
+    });
+
+    // Interactive 3D tilt tracking
+    if (window.matchMedia('(pointer: fine)').matches) {
+      wrap.addEventListener('mouseenter', () => {
+        if (typeof playPaperRustle === 'function') {
+          playPaperRustle();
+        }
+      });
+
+      wrap.addEventListener('mousemove', (e) => {
+        const rect = wrap.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+
+        const xNorm = (mouseX / rect.width) - 0.5;
+        const yNorm = (mouseY / rect.height) - 0.5;
+
+        // Glare coordinates
+        const glareX = (mouseX / rect.width) * 100;
+        const glareY = (mouseY / rect.height) * 100;
+        wrap.style.setProperty('--mouse-x', `${glareX}%`);
+        wrap.style.setProperty('--mouse-y', `${glareY}%`);
+
+        const isFlipped = card.classList.contains('is-flipped');
+        const rotX = -yNorm * 11;
+        const rotY = xNorm * 11;
+
+        if (isFlipped) {
+          card.style.transform = `perspective(1400px) rotateX(${rotX.toFixed(2)}deg) rotateY(${180 + rotY.toFixed(2)}deg) translateY(-8px) scale(1.02)`;
+        } else {
+          card.style.transform = `perspective(1400px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) translateY(-8px) scale(1.02)`;
+        }
+      });
+
+      wrap.addEventListener('mouseleave', () => {
+        const isFlipped = card.classList.contains('is-flipped');
+        card.style.transition = 'transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease';
+        card.style.transform = isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
+        setTimeout(() => {
+          card.style.transition = '';
+        }, 650);
+      });
+    }
+  });
 
   // ── Keyboard Esc ────────────────────────────────────────────
   document.addEventListener('keydown', (e) => {
