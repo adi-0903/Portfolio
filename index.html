@@ -1,0 +1,2224 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Singhal — Full-Stack &amp; AI Systems Engineer</title>
+  <meta name="description"
+    content="Portfolio of Aditya Singhal, Full-Stack and AI-ML Engineer specializing in distributed microservices, real-time computer vision, and generative AI pipelines." />
+  <meta name="theme-color" content="#f6f4ee" />
+
+  <!-- Google Fonts: Editorial Serif + Precision Sans + Handwritten Script -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
+
+  <!-- Ambient 3D Spotlight Follower -->
+  <div class="ambient-spotlight" id="ambient-spotlight" aria-hidden="true"></div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Primary navigation">
+    <a href="#" class="nav__logo" id="nav-logo" aria-label="Aditya Singhal Home">
+      <div class="nav__logo-stamp" aria-hidden="true">
+        <span>AS</span>
+      </div>
+      <span class="nav__logo-text">ADITYA<span>.</span>SINGHAL</span>
+      <span class="nav__logo-edition">AI &bull; FULL-STACK</span>
+    </a>
+
+    <ul class="nav__links" id="nav-links" role="list">
+      <li><a href="#work" class="nav__link nav__link--active" id="nav-work">Projects</a></li>
+      <li><a href="#experience" class="nav__link" id="nav-experience">Experience</a></li>
+      <li><a href="#about" class="nav__link" id="nav-about">About &amp; Skills</a></li>
+      <li><a href="#services" class="nav__link" id="nav-services">Services</a></li>
+      <li><a href="#contact" class="nav__link" id="nav-contact">Dispatch &amp; Contact</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <!-- Sound FX Toggle -->
+      <button class="nav__action-btn" id="sound-toggle" aria-label="Toggle Sound Effects" title="Toggle tactile audio">
+        <svg class="sound-icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+        </svg>
+        <svg class="sound-icon-off" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <line x1="23" y1="9" x2="17" y2="15"></line>
+          <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+        <span class="action-btn-text">Audio</span>
+      </button>
+
+      <!-- Theme Switcher (Parchment vs Studio Noir) -->
+      <button class="nav__action-btn" id="theme-toggle" aria-label="Toggle Theme (Parchment / Studio Noir)"
+        title="Toggle parchment & dark studio">
+        <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="theme-icon-moon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <span class="action-btn-text" id="theme-text">Parchment</span>
+      </button>
+
+      <!-- GitHub Link -->
+      <a href="https://github.com/adi-0903" target="_blank" rel="noopener noreferrer" class="nav__action-btn"
+        aria-label="GitHub Profile" title="GitHub">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path
+            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+          </path>
+        </svg>
+      </a>
+
+      <button class="nav__menu-btn" id="nav-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false"
+        aria-controls="mobile-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="#work" class="mobile-nav__link" id="mobile-nav-work">Projects</a>
+    <a href="#experience" class="mobile-nav__link" id="mobile-nav-experience">Experience</a>
+    <a href="#about" class="mobile-nav__link" id="mobile-nav-about">About &amp; Skills</a>
+    <a href="#services" class="mobile-nav__link" id="mobile-nav-services">Services</a>
+    <a href="#contact" class="mobile-nav__link" id="mobile-nav-contact">Dispatch &amp; Contact</a>
+  </div>
+
+  <main id="main-content">
+    <!-- ═══ HERO: 3D FLOATING POSTCARDS STAGE ═══ -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="hero__warm-glow" aria-hidden="true"></div>
+
+      <div class="hero__container">
+        <!-- Text Column -->
+        <div class="hero__content">
+          <div class="hero__tag" aria-hidden="true">
+            <span class="hero__tag-dot"></span>
+            Full-Stack &amp; AI-ML Systems Engineer &bull;
+          </div>
+
+          <h1 class="hero__title">
+            Architecting Systems Across<br />
+            <em>Distributed Code</em> &amp; Vision.
+          </h1>
+
+          <p class="hero__subtitle">
+            Hands-on engineer architecting distributed, multi-service backends (21 microservices, sub-200ms APIs) and
+            real-time computer vision / generative AI pipelines, backed by production enterprise internship experience
+            and an MBA in Business Analytics.
+          </p>
+
+          <div class="hero__cta-group">
+            <a href="#work" class="btn btn--primary" id="cta-explore">
+              <span>Explore 3D Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+            <button class="btn btn--outline" id="hero-flip-toggle" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                <path d="M21 3v5h-5" />
+                <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+                <path d="M3 21v-5h5" />
+              </svg>
+              <span>Flip All Postcards ↺</span>
+            </button>
+            <a href="#experience" class="btn btn--ghost" id="cta-experience">View Experience &rarr;</a>
+          </div>
+
+          <!-- Production Meta Metrics -->
+          <div class="hero__meta-strip">
+            <div class="hero__meta-item">
+              <span class="hero__meta-num">21</span>
+              <span class="hero__meta-label">Domain Microservices</span>
+            </div>
+            <div class="hero__meta-sep" aria-hidden="true"></div>
+            <div class="hero__meta-item">
+              <span class="hero__meta-num">&lt;200ms</span>
+              <span class="hero__meta-label">API Response Time</span>
+            </div>
+            <div class="hero__meta-sep" aria-hidden="true"></div>
+            <div class="hero__meta-item">
+              <span class="hero__meta-num">6+</span>
+              <span class="hero__meta-label">Production Apps Shipped</span>
+            </div>
+            <div class="hero__meta-sep" aria-hidden="true"></div>
+            <div class="hero__meta-item">
+              <span class="hero__meta-num">7+</span>
+              <span class="hero__meta-label">Generative AI Formats</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Interactive Postcard Stage -->
+        <div class="hero__stage-wrapper">
+          <div class="hero__stage" id="hero-stage" aria-label="Interactive 3D Project Postcards">
+            <!-- Left Background Floating Card: Kisan Sathi -->
+            <div class="hero-card hero-card--left" id="hero-card-left" data-depth="0.08">
+              <div class="hero-card__stamp" aria-hidden="true">
+                <span>PWA</span>
+              </div>
+              <img src="images/project-kisansathi.jpg" alt="Kisan Sathi AI Agritech PWA project" />
+              <div class="hero-card__label">Kisan Sathi &bull; Gemini Vision</div>
+            </div>
+
+            <!-- Right Background Floating Card: AI Parking Drone Vision -->
+            <div class="hero-card hero-card--right" id="hero-card-right" data-depth="0.12">
+              <div class="hero-card__stamp" aria-hidden="true">
+                <span>YOLOv8</span>
+              </div>
+              <img src="images/project-parkingai.jpg" alt="AI Parking Analytics project" />
+              <div class="hero-card__label">Aerial Drone Vision &bull; 2025</div>
+            </div>
+
+            <!-- Main Foreground 3D Postcard: MentIQ -->
+            <div class="hero-card hero-card--center" id="hero-card-center" data-depth="0.2">
+              <div class="hero-card__torn-top" aria-hidden="true"></div>
+
+              <!-- Postal Elements -->
+              <div class="postcard-stamp-badge" aria-hidden="true">
+                <div class="stamp-perforations">
+                  <span class="stamp-country">SYSTEM</span>
+                  <span class="stamp-price">21 SVC</span>
+                  <svg class="stamp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m14 8-4 4 4 4" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Postmark Ink Stamp -->
+              <div class="postcard-postmark" aria-hidden="true">
+                <svg viewBox="0 0 100 100" class="postmark-svg">
+                  <circle cx="50" cy="50" r="44" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-dasharray="4 2" />
+                  <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-width="1.5" fill="none" />
+                  <text x="50" y="38" text-anchor="middle" font-size="9" font-weight="bold" fill="currentColor">MENTIQ
+                    ECOSYSTEM</text>
+                  <text x="50" y="52" text-anchor="middle" font-size="8" fill="currentColor">SUB-200MS APIs</text>
+                  <text x="50" y="66" text-anchor="middle" font-size="7" fill="currentColor">TRI-PLATFORM</text>
+                </svg>
+                <div class="postmark-lines">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+
+              <!-- Wax Seal -->
+              <div class="wax-seal" aria-hidden="true" title="Verified Architecture">
+                <div class="wax-seal__inner">
+                  <span class="wax-seal__letter">AS</span>
+                </div>
+              </div>
+
+              <!-- Project Image with glare -->
+              <div class="hero-card__img-wrap">
+                <img src="images/project-mentiq.jpg" alt="MentIQ Tri-Platform AI E-Learning Ecosystem"
+                  id="hero-main-img" />
+                <div class="hero-card__glare" id="hero-card-glare" aria-hidden="true"></div>
+              </div>
+
+              <div class="hero-card__caption">
+                <div class="hero-card__badge">FLAGSHIP ARCHITECTURE</div>
+                <div class="hero-card__title">MentIQ &bull; Tri-Platform AI Ecosystem</div>
+                <div class="hero-card__coord">Django REST &bull; React Native &bull; Redis &bull; Groq Llama 3</div>
+              </div>
+
+              <div class="hero-card__torn-bottom" aria-hidden="true"></div>
+            </div>
+
+            <!-- Floating Spatial Badges -->
+            <div class="floating-tag floating-tag--1" data-depth="0.15" aria-hidden="true">
+              <span class="airmail-stripes"></span>
+              <span>GROQ + LLAMA 3 &bull; KNOWLEDGE GRAPH</span>
+            </div>
+
+            <div class="floating-tag floating-tag--2" data-depth="0.25" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>3D INTERACTIVE ARCHIVE</span>
+            </div>
+          </div>
+          <p class="hero__stage-hint" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+            Interactive 3D Stage &bull; Move cursor to tilt perspective
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>Scroll to inspect projects</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══ MARQUEE ═══ -->
+    <div class="marquee-section" aria-hidden="true">
+      <div class="marquee" id="marquee">
+        <span class="marquee__item"><span class="marquee__badge">AI</span> MentIQ Microservices</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">Ember &amp; Stone Steakhouse</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">Gemini Vision DocScan AI</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">Kisan Sathi Agritech PWA</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">FacePass Biometric Anti-Spoofing</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">Age &amp; Gender WideResNet AI</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">Mind Matrix Series Platform</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">Drone Vision &amp; YOLOv8</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">Teevra Generative Studio</span>
+        <span class="marquee__dot"></span>
+        <!-- Duplicated for seamless loop -->
+        <span class="marquee__item"><span class="marquee__badge">AI</span> MentIQ Microservices</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">Ember &amp; Stone Steakhouse</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">Gemini Vision DocScan AI</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">Kisan Sathi Agritech PWA</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">FacePass Biometric Anti-Spoofing</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">Age &amp; Gender WideResNet AI</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">Mind Matrix Series Platform</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">Drone Vision &amp; YOLOv8</span>
+        <span class="marquee__dot"></span>
+        <span class="marquee__item">Teevra Generative Studio</span>
+        <span class="marquee__dot"></span>
+      </div>
+    </div>
+
+    <!-- ═══ WORK / 3D PROJECT POSTCARD GALLERY ═══ -->
+    <section class="section" id="work" aria-label="Featured projects archive">
+      <div class="section__container">
+        <div class="section__header reveal">
+          <div class="section__badge">FEATURED PROJECTS &bull; 3D POSTCARD ARCHIVE</div>
+          <h2 class="section__title">Systems, Vision &amp;<br />Generative Intelligence</h2>
+          <p class="section__description">
+            Hover over any postcard to trigger real-time 3D tilt. Click <strong>Flip Note ↺</strong> to reveal
+            architectural notes, benchmarks, tech stacks, and live links.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="gallery-controls reveal">
+          <div class="filter-bar" role="tablist" aria-label="Filter projects">
+            <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all" id="filter-all">All Projects (9)</button>
+            <button class="filter-btn" role="tab" aria-selected="false" data-filter="fullstack" id="filter-fullstack">Distributed &amp; Full-Stack (3)</button>
+            <button class="filter-btn" role="tab" aria-selected="false" data-filter="aiml" id="filter-aiml">AI / ML &amp; Vision (5)</button>
+            <button class="filter-btn" role="tab" aria-selected="false" data-filter="genai" id="filter-genai">Generative Media (1)</button>
+          </div>
+
+          <div class="gallery-actions">
+            <button class="btn btn--small btn--outline" id="flip-all-btn" type="button" title="Flip all cards at once">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                <path d="M21 3v5h-5" />
+                <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+                <path d="M3 21v-5h5" />
+              </svg>
+              <span>Flip All Cards ↺</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3D Gallery Grid -->
+        <div class="gallery" id="gallery" role="tabpanel" aria-label="Project cards gallery">
+
+          <!-- ════ CARD 1: MentIQ ════ -->
+          <div class="postcard-3d-wrap reveal" data-category="fullstack" id="postcard-wrap-1">
+            <article class="postcard-card" id="postcard-1" tabindex="0" aria-label="MentIQ Project Card">
+
+              <!-- FRONT FACE -->
+              <div class="postcard__face postcard__face--front">
+                <div class="postcard__torn postcard__torn--top" aria-hidden="true"></div>
+
+                <div class="post-stamp post-stamp--1" aria-hidden="true">
+                  <div class="stamp-inner">
+                    <span class="stamp-val">21 SVC</span>
+                    <span class="stamp-sub">LLAMA 3</span>
+                  </div>
+                </div>
+                <div class="post-cancel-lines" aria-hidden="true"></div>
+
+                <div class="postcard__image-wrap">
+                  <img src="images/project-mentiq.jpg" alt="MentIQ Tri-Platform AI E-Learning Ecosystem"
+                    class="postcard__image" loading="lazy" />
+                  <div class="postcard__glare" aria-hidden="true"></div>
+                </div>
+
+                <div class="postcard__body">
+                  <div class="postcard__meta-row">
+                    <span class="postcard__category">Full-Stack &bull; Microservices</span>
+                    <span class="postcard__date">OCT 2025 – MAY 2026</span>
+                  </div>
+                  <h3 class="postcard__title">MentIQ — Tri-Platform AI Ecosystem</h3>
+                  <p class="postcard__excerpt">
+                    Distributed architecture across iOS, Android &amp; web with 21 microservices, sub-200ms APIs, Groq +
+                    Llama 3 tutoring knowledge graph, and Jitsi Meet classrooms.
+                  </p>
+
+                  <div class="postcard__actions">
+                    <button class="card-btn card-btn--flip" type="button"
+                      aria-label="Flip postcard to see architectural breakdown">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                        <path d="M21 3v5h-5" />
+                        <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+                        <path d="M3 21v-5h5" />
+                      </svg>
+                      <span>Flip Note ↺</span>
+                    </button>
+                    <a href="https://github.com/adi-0903/E-learningApp-MentIQ" target="_blank" rel="noopener noreferrer"
+                      class="card-btn card-btn--github" aria-label="MentIQ GitHub Repository">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                      <span>GitHub</span>
+                    </a>
+                    <a href="https://ment-iq.vercel.app/" target="_blank" rel="noopener noreferrer"
+                      class="card-btn card-btn--live" aria-label="MentIQ Live Web Application">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                      <span>Live App ↗</span>
+                    </a>
+                    <button class="card-btn card-btn--inspect" type="button" aria-label="Inspect postcard in 3D orbit">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                      </svg>
+                      <span>Inspect 3D</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="postcard__torn postcard__torn--bottom" aria-hidden="true"></div>
+              </div>
+
+              <!-- BACK FACE -->
+              <div class="postcard__face postcard__face--back">
+                <div class="postcard-back__header">
+                  <div class="airmail-stripes-bar"></div>
+                  <div class="postcard-back__badge">DISPATCH &bull; DISTRIBUTED SYSTEMS ARCHITECTURE</div>
+                </div>
+
+                <div class="postcard-back__grid">
+                  <div class="postcard-back__message">
+                    <p class="handwritten-text">
+                      "Architected 21 domain microservices across Django REST, Celery/Beat &amp; Redis/Elasticsearch.
+                      Powering real-time Llama 3 tutoring &amp; sub-200ms queries under heavy load."
+                    </p>
+                    <div class="handwritten-sig">
+                      &mdash; Aditya Singhal &bull; Core Architect
+                    </div>
+                    <div class="postcard-back__specs">
+                      <span><strong>Stack:</strong> Django REST, React Native, Vite, Redis, Celery</span>
+                      <span><strong>AI:</strong> Groq + Llama 3 Knowledge Graph</span>
+                      <span><strong>Repo:</strong> <a href="https://github.com/adi-0903/E-learningApp-MentIQ" target="_blank" rel="noopener noreferrer" class="postcard-spec-link">adi-0903/E-learningApp-MentIQ ↗</a></span>
+                    </div>
+                  </div>
+
+                  <div class="postcard-back__postage">
+                    <div class="stamp-box">
+                      <div class="post-stamp post-stamp--vintage">
+                        <span>POST</span>
+                        <strong>&lt;200ms</strong>
+                      </div>
+                      <div class="wax-seal wax-seal--sm">
+                        <span>AS</span>
+                      </div>
+                    </div>
+
+                    <div class="address-lines">
+                      <div class="address-line">To: Scaled Technology Hiring Team</div>
+                      <div class="address-line">Software / AI-ML Engineering</div>
+                      <div class="address-line">Enterprise Systems Division</div>
+                    </div>
+
+                    <div class="postal-barcode">
+                      ||| | ||||| | || |||| | ||||| ||| |
+                    </div>
+                  </div>
+                </div>
+
+                <div class="postcard-back__footer">
+                  <button class="card-btn card-btn--flip-back" type="button">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                      <path d="M21 3v5h-5" />
+                    </svg>
+                    <span>Flip to Overview &rarr;</span>
+                  </button>
+                  <div class="postcard-back__footer-links">
+                    <a href="https://github.com/adi-0903/E-learningApp-MentIQ" target="_blank" rel="noopener noreferrer" class="card-btn card-btn--github">GitHub</a>
+                    <a href="https://ment-iq.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-btn card-btn--live">Live App ↗</a>
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <span>Full 3D Orbit 🔍</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </article>
+          </div>
+
+          <!-- ════ CARD 2: Kisan Sathi ════ -->
+          <div class="postcard-3d-wrap reveal reveal-delay-1" data-category="aiml" id="postcard-wrap-2">
+            <article class="postcard-card" id="postcard-2" tabindex="0" aria-label="Kisan Sathi Project Card">
+
+              <div class="postcard__face postcard__face--front">
+                <div class="postcard__torn postcard__torn--top" aria-hidden="true"></div>
+
+                <div class="post-stamp post-stamp--2" aria-hidden="true">
+                  <div class="stamp-inner">
+                    <span class="stamp-val">VISION</span>
+                    <span class="stamp-sub">GEMINI</span>
+                  </div>
+                </div>
+                <div class="post-cancel-lines" aria-hidden="true"></div>
+
+                <div class="postcard__image-wrap">
+                  <img src="images/project-kisansathi.jpg" alt="Kisan Sathi AI Agritech PWA for Indian Farmers"
+                    class="postcard__image" loading="lazy" />
+                  <div class="postcard__glare" aria-hidden="true"></div>
+                </div>
+
+                <div class="postcard__body">
+                  <div class="postcard__meta-row">
+                    <span class="postcard__category">AI Agritech &bull; PWA &bull; Vision</span>
+                    <span class="postcard__date">2025</span>
+                  </div>
+                  <h3 class="postcard__title">Kisan Sathi — AI Agritech PWA</h3>
+                  <p class="postcard__excerpt">
+                    Offline-first, multilingual (English/Hindi/Punjabi) farm management PWA with Gemini Vision crop-disease
+                    diagnosis and weather-driven spray advisories.
+                  </p>
+
+                  <div class="postcard__actions">
+                    <button class="card-btn card-btn--flip" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                        <path d="M21 3v5h-5" />
+                        <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+                        <path d="M3 21v-5h5" />
+                      </svg>
+                      <span>Flip Note ↺</span>
+                    </button>
+                    <a href="https://github.com/adi-0903/Kisan-sathi" target="_blank" rel="noopener noreferrer"
+                      class="card-btn card-btn--github" aria-label="Kisan Sathi GitHub Repository">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                      <span>GitHub</span>
+                    </a>
+                    <a href="https://kisan-saathi-zboa.onrender.com" target="_blank" rel="noopener noreferrer"
+                      class="card-btn card-btn--live" aria-label="Kisan Sathi Live Deployment">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                      <span>Live App ↗</span>
+                    </a>
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                      </svg>
+                      <span>Inspect 3D</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="postcard__torn postcard__torn--bottom" aria-hidden="true"></div>
+              </div>
+
+              <div class="postcard__face postcard__face--back">
+                <div class="postcard-back__header">
+                  <div class="airmail-stripes-bar"></div>
+                  <div class="postcard-back__badge">DISPATCH &bull; OFFLINE-FIRST AGRI AI</div>
+                </div>
+
+                <div class="postcard-back__grid">
+                  <div class="postcard-back__message">
+                    <p class="handwritten-text">
+                      "Engineered for zero-reception fields in rural Punjab. Persists all records in IndexedDB with
+                      auto-sync, photo diagnosis via Gemini Vision, and mandi price feeds."
+                    </p>
+                    <div class="handwritten-sig">
+                      &mdash; Aditya Singhal
+                    </div>
+                    <div class="postcard-back__specs">
+                      <span><strong>Tech:</strong> React 19, TypeScript, Express, IndexedDB</span>
+                      <span><strong>Features:</strong> Disease Vision, Multi-lingual, Agri-shop</span>
+                      <span><strong>Repo:</strong> <a href="https://github.com/adi-0903/Kisan-sathi" target="_blank" rel="noopener noreferrer" class="postcard-spec-link">adi-0903/Kisan-sathi ↗</a></span>
+                    </div>
+                  </div>
+
+                  <div class="postcard-back__postage">
+                    <div class="stamp-box">
+                      <div class="post-stamp post-stamp--vintage">
+                        <span>PUNJAB</span>
+                        <strong>AGRI</strong>
+                      </div>
+                      <div class="wax-seal wax-seal--sm">
+                        <span>AS</span>
+                      </div>
+                    </div>
+
+                    <div class="address-lines">
+                      <div class="address-line">To: Agritech &amp; Edge Vision Labs</div>
+                      <div class="address-line">Mobile &amp; Offline Systems</div>
+                      <div class="address-line">India / Global Deployment</div>
+                    </div>
+
+                    <div class="postal-barcode">
+                      |||| ||| || | |||| || ||||| ||| ||
+                    </div>
+                  </div>
+                </div>
+
+                <div class="postcard-back__footer">
+                  <button class="card-btn card-btn--flip-back" type="button">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                      <path d="M21 3v5h-5" />
+                    </svg>
+                    <span>Flip to Overview &rarr;</span>
+                  </button>
+                  <div class="postcard-back__footer-links">
+                    <a href="https://github.com/adi-0903/Kisan-sathi" target="_blank" rel="noopener noreferrer" class="card-btn card-btn--github">GitHub</a>
+                    <a href="https://kisan-saathi-zboa.onrender.com" target="_blank" rel="noopener noreferrer" class="card-btn card-btn--live">Live App ↗</a>
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <span>Full 3D Orbit 🔍</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </article>
+          </div>
+
+          <!-- ════ CARD 3: Mind Matrix ════ -->
+          <div class="postcard-3d-wrap reveal reveal-delay-2" data-category="fullstack" id="postcard-wrap-3">
+            <article class="postcard-card" id="postcard-3" tabindex="0" aria-label="Mind Matrix Project Card">
+
+              <div class="postcard__face postcard__face--front">
+                <div class="postcard__torn postcard__torn--top" aria-hidden="true"></div>
+
+                <div class="post-stamp post-stamp--3" aria-hidden="true">
+                  <div class="stamp-inner">
+                    <span class="stamp-val">OAUTH</span>
+                    <span class="stamp-sub">NEON PG</span>
+                  </div>
+                </div>
+                <div class="post-cancel-lines" aria-hidden="true"></div>
+
+                <div class="postcard__image-wrap">
+                  <img src="images/project-mindmatrix.jpg" alt="Mind Matrix Blogging, Series & Events Platform"
+                    class="postcard__image" loading="lazy" />
+                  <div class="postcard__glare" aria-hidden="true"></div>
+                </div>
+
+                <div class="postcard__body">
+                  <div class="postcard__meta-row">
+                    <span class="postcard__category">Full-Stack &bull; Series &amp; Events</span>
+                    <span class="postcard__date">2025</span>
+                  </div>
+                  <h3 class="postcard__title">Mind Matrix — Series &amp; Events Platform</h3>
+                  <p class="postcard__excerpt">
+                    Full-stack publishing platform with structured Series/Seasons/Episodes, JWT + Google OAuth 2.0 dual
+                    authentication, and Framer Motion micro-interactions.
+                  </p>
+
+                  <div class="postcard__actions">
+                    <button class="card-btn card-btn--flip" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                        <path d="M21 3v5h-5" />
+                        <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+                        <path d="M3 21v-5h5" />
+                      </svg>
+                      <span>Flip Note ↺</span>
+                    </button>
+                    <a href="https://github.com/adi-0903/Matrix" target="_blank" rel="noopener noreferrer"
+                      class="card-btn card-btn--github" aria-label="Mind Matrix GitHub Repository">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                      <span>GitHub</span>
+                    </a>
+                    <a href="https://matrix-henna-nine.vercel.app" target="_blank" rel="noopener noreferrer"
+                      class="card-btn card-btn--live" aria-label="Mind Matrix Live Web Application">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                      <span>Live App ↗</span>
+                    </a>
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                      </svg>
+                      <span>Inspect 3D</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="postcard__torn postcard__torn--bottom" aria-hidden="true"></div>
+              </div>
+
+              <div class="postcard__face postcard__face--back">
+                <div class="postcard-back__header">
+                  <div class="airmail-stripes-bar"></div>
+                  <div class="postcard-back__badge">DISPATCH &bull; EVENT &amp; MEDIA ARCHITECTURE</div>
+                </div>
+
+                <div class="postcard-back__grid">
+                  <div class="postcard-back__message">
+                    <p class="handwritten-text">
+                      "Designed threaded recursive comments, automated reading-time algorithms, and dual authentication
+                      with local SQLite fallback for sandboxed offline dev."
+                    </p>
+                    <div class="handwritten-sig">
+                      &mdash; Aditya Singhal
+                    </div>
+                    <div class="postcard-back__specs">
+                      <span><strong>Stack:</strong> React, Vite, Framer Motion, Django REST</span>
+                      <span><strong>DB:</strong> PostgreSQL (Neon Cloud) / SQLite</span>
+                      <span><strong>Repo:</strong> <a href="https://github.com/adi-0903/Matrix" target="_blank" rel="noopener noreferrer" class="postcard-spec-link">adi-0903/Matrix ↗</a></span>
+                    </div>
+                  </div>
+
+                  <div class="postcard-back__postage">
+                    <div class="stamp-box">
+                      <div class="post-stamp post-stamp--vintage">
+                        <span>MEDIA</span>
+                        <strong>VITE</strong>
+                      </div>
+                      <div class="wax-seal wax-seal--sm">
+                        <span>AS</span>
+                      </div>
+                    </div>
+
+                    <div class="address-lines">
+                      <div class="address-line">To: Product &amp; Frontend Leadership</div>
+                      <div class="address-line">Modern Web Architecture</div>
+                      <div class="address-line">Global Engineering Guild</div>
+                    </div>
+
+                    <div class="postal-barcode">
+                      || | ||||| || ||| |||| | ||||| | ||
+                    </div>
+                  </div>
+                </div>
+
+                <div class="postcard-back__footer">
+                  <button class="card-btn card-btn--flip-back" type="button">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                      <path d="M21 3v5h-5" />
+                    </svg>
+                    <span>Flip to Overview &rarr;</span>
+                  </button>
+                  <div class="postcard-back__footer-links">
+                    <a href="https://github.com/adi-0903/Matrix" target="_blank" rel="noopener noreferrer" class="card-btn card-btn--github">GitHub</a>
+                    <a href="https://matrix-henna-nine.vercel.app" target="_blank" rel="noopener noreferrer" class="card-btn card-btn--live">Live App ↗</a>
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <span>Full 3D Orbit 🔍</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </article>
+          </div>
+
+          <!-- ════ CARD 4: Ember & Stone ════ -->
+          <div class="postcard-3d-wrap reveal" data-category="fullstack" id="postcard-wrap-4">
+            <article class="postcard-card" id="postcard-4" tabindex="0" aria-label="Ember and Stone Project Card">
+
+              <div class="postcard__face postcard__face--front">
+                <div class="postcard__torn postcard__torn--top" aria-hidden="true"></div>
+
+                <div class="post-stamp post-stamp--1" aria-hidden="true">
+                  <div class="stamp-inner">
+                    <span class="stamp-val">REACT 19</span>
+                    <span class="stamp-sub">LUXURY</span>
+                  </div>
+                </div>
+                <div class="post-cancel-lines" aria-hidden="true"></div>
+
+                <div class="postcard__image-wrap">
+                  <img src="images/project-emberstone.jpg" alt="Ember & Stone Prime Wood-Fired Steakhouse and Cocktail Alchemy Bar"
+                    class="postcard__image" loading="lazy" />
+                  <div class="postcard__glare" aria-hidden="true"></div>
+                </div>
+
+                <div class="postcard__body">
+                  <div class="postcard__meta-row">
+                    <span class="postcard__category">Full-Stack &bull; Culinary Alchemy</span>
+                    <span class="postcard__date">2025</span>
+                  </div>
+                  <h3 class="postcard__title">Ember &amp; Stone — Wood-Fired Steakhouse</h3>
+                  <p class="postcard__excerpt">
+                    Luxury culinary web application in Chicago blending prime dry-aged cuts with tableside mixology alchemical bar, VIP reservations, and bespoke dark-mode editorial UX.
+                  </p>
+
+                  <div class="postcard__actions">
+                    <button class="card-btn card-btn--flip" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                        <path d="M21 3v5h-5" />
+                        <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+                        <path d="M3 21v-5h5" />
+                      </svg>
+                      <span>Flip Note ↺</span>
+                    </button>
+                    <a href="https://github.com/adi-0903/Ember-Stone" target="_blank" rel="noopener noreferrer"
+                      class="card-btn card-btn--github" aria-label="Ember & Stone GitHub Repository">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                      <span>GitHub</span>
+                    </a>
+                    <a href="https://ember-stone.ai.studio" target="_blank" rel="noopener noreferrer"
+                      class="card-btn card-btn--live" aria-label="Ember & Stone Live Studio Website">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                      <span>Live App ↗</span>
+                    </a>
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                      </svg>
+                      <span>Inspect 3D</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="postcard__torn postcard__torn--bottom" aria-hidden="true"></div>
+              </div>
+
+              <div class="postcard__face postcard__face--back">
+                <div class="postcard-back__header">
+                  <div class="airmail-stripes-bar"></div>
+                  <div class="postcard-back__badge">DISPATCH &bull; LUXURY WEB ARCHITECTURE</div>
+                </div>
+
+                <div class="postcard-back__grid">
+                  <div class="postcard-back__message">
+                    <p class="handwritten-text">
+                      "Crafted an immersive culinary digital experience for Chicago's premier steakhouse. High-performance
+                      React 19 frontend with real-time reservation scheduling and tableside mixology catalog."
+                    </p>
+                    <div class="handwritten-sig">
+                      &mdash; Aditya Singhal
+                    </div>
+                    <div class="postcard-back__specs">
+                      <span><strong>Stack:</strong> React 19, TypeScript, Tailwind CSS, Vite</span>
+                      <span><strong>Features:</strong> VIP Table Booking, Alchemical Mixology</span>
+                      <span><strong>Repo:</strong> <a href="https://github.com/adi-0903/Ember-Stone" target="_blank" rel="noopener noreferrer" class="postcard-spec-link">adi-0903/Ember-Stone ↗</a></span>
+                    </div>
+                  </div>
+
+                  <div class="postcard-back__postage">
+                    <div class="stamp-box">
+                      <div class="post-stamp post-stamp--vintage">
+                        <span>CHICAGO</span>
+                        <strong>STEAK</strong>
+                      </div>
+                      <div class="wax-seal wax-seal--sm">
+                        <span>AS</span>
+                      </div>
+                    </div>
+
+                    <div class="address-lines">
+                      <div class="address-line">To: Premium Hospitality Tech</div>
+                      <div class="address-line">Interactive Experience Design</div>
+                      <div class="address-line">Chicago / Global Deployment</div>
+                    </div>
+
+                    <div class="postal-barcode">
+                      ||| || | |||| ||| || | ||||| || |
+                    </div>
+                  </div>
+                </div>
+
+                <div class="postcard-back__footer">
+                  <button class="card-btn card-btn--flip-back" type="button">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                      <path d="M21 3v5h-5" />
+                    </svg>
+                    <span>Flip to Overview &rarr;</span>
+                  </button>
+                  <div class="postcard-back__footer-links">
+                    <a href="https://github.com/adi-0903/Ember-Stone" target="_blank" rel="noopener noreferrer" class="card-btn card-btn--github">GitHub</a>
+                    <a href="https://ember-stone.ai.studio" target="_blank" rel="noopener noreferrer" class="card-btn card-btn--live">Live App ↗</a>
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <span>Full 3D Orbit 🔍</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </article>
+          </div>
+
+          <!-- ════ CARD 5: DocScan AI ════ -->
+          <div class="postcard-3d-wrap reveal reveal-delay-1" data-category="aiml" id="postcard-wrap-5">
+            <article class="postcard-card" id="postcard-5" tabindex="0" aria-label="DocScan AI Project Card">
+
+              <div class="postcard__face postcard__face--front">
+                <div class="postcard__torn postcard__torn--top" aria-hidden="true"></div>
+
+                <div class="post-stamp post-stamp--4" aria-hidden="true">
+                  <div class="stamp-inner">
+                    <span class="stamp-val">GEMINI</span>
+                    <span class="stamp-sub">OCR AI</span>
+                  </div>
+                </div>
+                <div class="post-cancel-lines" aria-hidden="true"></div>
+
+                <div class="postcard__image-wrap">
+                  <img src="images/project-docscan.jpg" alt="DocScan AI Intelligent Document Extraction Assistant"
+                    class="postcard__image" loading="lazy" />
+                  <div class="postcard__glare" aria-hidden="true"></div>
+                </div>
+
+                <div class="postcard__body">
+                  <div class="postcard__meta-row">
+                    <span class="postcard__category">AI Vision &bull; Document Intelligence</span>
+                    <span class="postcard__date">2025</span>
+                  </div>
+                  <h3 class="postcard__title">DocScan AI — Document Extraction Assistant</h3>
+                  <p class="postcard__excerpt">
+                    Intelligent document extraction web app using Google Gemini Vision AI to parse receipts, invoices, utility
+                    bills, and handwriting into structured JSON and table exports.
+                  </p>
+
+                  <div class="postcard__actions">
+                    <button class="card-btn card-btn--flip" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                        <path d="M21 3v5h-5" />
+                        <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+                        <path d="M3 21v-5h5" />
+                      </svg>
+                      <span>Flip Note ↺</span>
+                    </button>
+                    <a href="https://github.com/adi-0903/DocScan-AI" target="_blank" rel="noopener noreferrer"
+                      class="card-btn card-btn--github" aria-label="DocScan AI GitHub Repository">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                      <span>GitHub</span>
+                    </a>
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                      </svg>
+                      <span>Inspect 3D</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="postcard__torn postcard__torn--bottom" aria-hidden="true"></div>
+              </div>
+
+              <div class="postcard__face postcard__face--back">
+                <div class="postcard-back__header">
+                  <div class="airmail-stripes-bar"></div>
+                  <div class="postcard-back__badge">DISPATCH &bull; DOCUMENT VISION PIPELINE</div>
+                </div>
+
+                <div class="postcard-back__grid">
+                  <div class="postcard-back__message">
+                    <p class="handwritten-text">
+                      "Multi-mode input with camera capture &amp; drag-and-drop. Employs Gemini Vision prompt engineering
+                      to extract key-value pairs, line items, and totals with instant JSON/CSV export."
+                    </p>
+                    <div class="handwritten-sig">
+                      &mdash; Aditya Singhal
+                    </div>
+                    <div class="postcard-back__specs">
+                      <span><strong>Stack:</strong> React, TypeScript, Vite, Gemini Vision AI</span>
+                      <span><strong>Capability:</strong> Invoices, Receipts, Handwriting, JSON</span>
+                      <span><strong>Repo:</strong> <a href="https://github.com/adi-0903/DocScan-AI" target="_blank" rel="noopener noreferrer" class="postcard-spec-link">adi-0903/DocScan-AI ↗</a></span>
+                    </div>
+                  </div>
+
+                  <div class="postcard-back__postage">
+                    <div class="stamp-box">
+                      <div class="post-stamp post-stamp--vintage">
+                        <span>OCR</span>
+                        <strong>VISION</strong>
+                      </div>
+                      <div class="wax-seal wax-seal--sm">
+                        <span>AS</span>
+                      </div>
+                    </div>
+
+                    <div class="address-lines">
+                      <div class="address-line">To: AI Information Extraction Labs</div>
+                      <div class="address-line">Intelligent Document Systems</div>
+                      <div class="address-line">Enterprise Cloud Guild</div>
+                    </div>
+
+                    <div class="postal-barcode">
+                      ||||| || | ||| |||| || | |||| || |
+                    </div>
+                  </div>
+                </div>
+
+                <div class="postcard-back__footer">
+                  <button class="card-btn card-btn--flip-back" type="button">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                      <path d="M21 3v5h-5" />
+                    </svg>
+                    <span>Flip to Overview &rarr;</span>
+                  </button>
+                  <div class="postcard-back__footer-links">
+                    <a href="https://github.com/adi-0903/DocScan-AI" target="_blank" rel="noopener noreferrer" class="card-btn card-btn--github">GitHub</a>
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <span>Full 3D Orbit 🔍</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </article>
+          </div>
+
+          <!-- ════ CARD 6: FacePass ════ -->
+          <div class="postcard-3d-wrap reveal reveal-delay-2" data-category="aiml" id="postcard-wrap-6">
+            <article class="postcard-card" id="postcard-6" tabindex="0" aria-label="FacePass Project Card">
+
+              <div class="postcard__face postcard__face--front">
+                <div class="postcard__torn postcard__torn--top" aria-hidden="true"></div>
+
+                <div class="post-stamp post-stamp--2" aria-hidden="true">
+                  <div class="stamp-inner">
+                    <span class="stamp-val">FASTAPI</span>
+                    <span class="stamp-sub">LIVENESS</span>
+                  </div>
+                </div>
+                <div class="post-cancel-lines" aria-hidden="true"></div>
+
+                <div class="postcard__image-wrap">
+                  <img src="images/project-facepass.jpg" alt="FacePass Real-Time Face Recognition & Anti-Spoofing Access Control"
+                    class="postcard__image" loading="lazy" />
+                  <div class="postcard__glare" aria-hidden="true"></div>
+                </div>
+
+                <div class="postcard__body">
+                  <div class="postcard__meta-row">
+                    <span class="postcard__category">Computer Vision &bull; Biometric Access</span>
+                    <span class="postcard__date">2025</span>
+                  </div>
+                  <h3 class="postcard__title">FacePass — Biometric Access &amp; Anti-Spoofing</h3>
+                  <p class="postcard__excerpt">
+                    Production-grade facial recognition access system with anti-spoofing liveness protection, sub-50ms
+                    verification, FastAPI microservices, and telemetry dashboard.
+                  </p>
+
+                  <div class="postcard__actions">
+                    <button class="card-btn card-btn--flip" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                        <path d="M21 3v5h-5" />
+                        <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+                        <path d="M3 21v-5h5" />
+                      </svg>
+                      <span>Flip Note ↺</span>
+                    </button>
+                    <a href="https://github.com/adi-0903/FacePass" target="_blank" rel="noopener noreferrer"
+                      class="card-btn card-btn--github" aria-label="FacePass GitHub Repository">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                      <span>GitHub</span>
+                    </a>
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                      </svg>
+                      <span>Inspect 3D</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="postcard__torn postcard__torn--bottom" aria-hidden="true"></div>
+              </div>
+
+              <div class="postcard__face postcard__face--back">
+                <div class="postcard-back__header">
+                  <div class="airmail-stripes-bar"></div>
+                  <div class="postcard-back__badge">DISPATCH &bull; BIOMETRIC DEFENSE PROTOCOL</div>
+                </div>
+
+                <div class="postcard-back__grid">
+                  <div class="postcard-back__message">
+                    <p class="handwritten-text">
+                      "Your Face, Your Access. Engineered deep-liveness verification to detect photo/screen spoof attacks,
+                      paired with high-concurrency FastAPI endpoints and SQLite audit trails."
+                    </p>
+                    <div class="handwritten-sig">
+                      &mdash; Aditya Singhal
+                    </div>
+                    <div class="postcard-back__specs">
+                      <span><strong>Stack:</strong> Python 3.9+, FastAPI, OpenCV, SQLite</span>
+                      <span><strong>Security:</strong> Anti-Spoofing Liveness, Sub-50ms Verification</span>
+                      <span><strong>Repo:</strong> <a href="https://github.com/adi-0903/FacePass" target="_blank" rel="noopener noreferrer" class="postcard-spec-link">adi-0903/FacePass ↗</a></span>
+                    </div>
+                  </div>
+
+                  <div class="postcard-back__postage">
+                    <div class="stamp-box">
+                      <div class="post-stamp post-stamp--vintage">
+                        <span>SECURITY</span>
+                        <strong>ACCESS</strong>
+                      </div>
+                      <div class="wax-seal wax-seal--sm">
+                        <span>AS</span>
+                      </div>
+                    </div>
+
+                    <div class="address-lines">
+                      <div class="address-line">To: Cyber Physical Systems Team</div>
+                      <div class="address-line">Biometrics &amp; Edge Security</div>
+                      <div class="address-line">Security Infrastructure Guild</div>
+                    </div>
+
+                    <div class="postal-barcode">
+                      |||| || ||| ||||| || | ||| |||| ||
+                    </div>
+                  </div>
+                </div>
+
+                <div class="postcard-back__footer">
+                  <button class="card-btn card-btn--flip-back" type="button">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                      <path d="M21 3v5h-5" />
+                    </svg>
+                    <span>Flip to Overview &rarr;</span>
+                  </button>
+                  <div class="postcard-back__footer-links">
+                    <a href="https://github.com/adi-0903/FacePass" target="_blank" rel="noopener noreferrer" class="card-btn card-btn--github">GitHub</a>
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <span>Full 3D Orbit 🔍</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </article>
+          </div>
+
+          <!-- ════ CARD 7: Age & Gender Detection ════ -->
+          <div class="postcard-3d-wrap reveal" data-category="aiml" id="postcard-wrap-7">
+            <article class="postcard-card" id="postcard-7" tabindex="0" aria-label="Age and Gender Detection Card">
+
+              <div class="postcard__face postcard__face--front">
+                <div class="postcard__torn postcard__torn--top" aria-hidden="true"></div>
+
+                <div class="post-stamp post-stamp--3" aria-hidden="true">
+                  <div class="stamp-inner">
+                    <span class="stamp-val">WRN-28</span>
+                    <span class="stamp-sub">12MS</span>
+                  </div>
+                </div>
+                <div class="post-cancel-lines" aria-hidden="true"></div>
+
+                <div class="postcard__image-wrap">
+                  <img src="images/project-agegender.jpg" alt="Pro-Series Age & Gender Detection v2.0 Biometric Analysis Engine"
+                    class="postcard__image" loading="lazy" />
+                  <div class="postcard__glare" aria-hidden="true"></div>
+                </div>
+
+                <div class="postcard__body">
+                  <div class="postcard__meta-row">
+                    <span class="postcard__category">Deep Learning &bull; Biometric Perception</span>
+                    <span class="postcard__date">2025</span>
+                  </div>
+                  <h3 class="postcard__title">Age &amp; Gender AI — Biometric Perception v2.0</h3>
+                  <p class="postcard__excerpt">
+                    Redundant real-time biometric analysis engine using WideResNet and TensorFlow, clocking 98.2% benchmark
+                    accuracy with 12ms inference latency and temporal smoothing.
+                  </p>
+
+                  <div class="postcard__actions">
+                    <button class="card-btn card-btn--flip" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                        <path d="M21 3v5h-5" />
+                        <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+                        <path d="M3 21v-5h5" />
+                      </svg>
+                      <span>Flip Note ↺</span>
+                    </button>
+                    <a href="https://github.com/adi-0903/Age-Gender-Detection" target="_blank" rel="noopener noreferrer"
+                      class="card-btn card-btn--github" aria-label="Age and Gender Detection GitHub Repository">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                      <span>GitHub</span>
+                    </a>
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                      </svg>
+                      <span>Inspect 3D</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="postcard__torn postcard__torn--bottom" aria-hidden="true"></div>
+              </div>
+
+              <div class="postcard__face postcard__face--back">
+                <div class="postcard-back__header">
+                  <div class="airmail-stripes-bar"></div>
+                  <div class="postcard-back__badge">DISPATCH &bull; REDUNDANT NEURAL INFERENCE</div>
+                </div>
+
+                <div class="postcard-back__grid">
+                  <div class="postcard-back__message">
+                    <p class="handwritten-text">
+                      "Engineered 24/7 reliability in complex lighting. WideResNet-28-10 backbone with temporal smoothing
+                      buffer to eliminate label flickering in continuous multi-face camera streams."
+                    </p>
+                    <div class="handwritten-sig">
+                      &mdash; Aditya Singhal
+                    </div>
+                    <div class="postcard-back__specs">
+                      <span><strong>Core:</strong> WideResNet-28-10, TensorFlow 2.x, OpenCV</span>
+                      <span><strong>Metrics:</strong> 98.2% Accuracy, 12ms Inference Latency</span>
+                      <span><strong>Repo:</strong> <a href="https://github.com/adi-0903/Age-Gender-Detection" target="_blank" rel="noopener noreferrer" class="postcard-spec-link">adi-0903/Age-Gender-Detection ↗</a></span>
+                    </div>
+                  </div>
+
+                  <div class="postcard-back__postage">
+                    <div class="stamp-box">
+                      <div class="post-stamp post-stamp--vintage">
+                        <span>NEURAL</span>
+                        <strong>TF 2.X</strong>
+                      </div>
+                      <div class="wax-seal wax-seal--sm">
+                        <span>AS</span>
+                      </div>
+                    </div>
+
+                    <div class="address-lines">
+                      <div class="address-line">To: Computer Vision Systems Group</div>
+                      <div class="address-line">Real-Time Inference Engineering</div>
+                      <div class="address-line">Interactive AI Ecosystems</div>
+                    </div>
+
+                    <div class="postal-barcode">
+                      ||| | ||||| | || |||| | ||||| ||| |
+                    </div>
+                  </div>
+                </div>
+
+                <div class="postcard-back__footer">
+                  <button class="card-btn card-btn--flip-back" type="button">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                      <path d="M21 3v5h-5" />
+                    </svg>
+                    <span>Flip to Overview &rarr;</span>
+                  </button>
+                  <div class="postcard-back__footer-links">
+                    <a href="https://github.com/adi-0903/Age-Gender-Detection" target="_blank" rel="noopener noreferrer" class="card-btn card-btn--github">GitHub</a>
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <span>Full 3D Orbit 🔍</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </article>
+          </div>
+
+          <!-- ════ CARD 8: AI Parking Analytics ════ -->
+          <div class="postcard-3d-wrap reveal reveal-delay-1" data-category="aiml" id="postcard-wrap-8">
+            <article class="postcard-card" id="postcard-8" tabindex="0" aria-label="AI Parking Analytics Card">
+
+              <div class="postcard__face postcard__face--front">
+                <div class="postcard__torn postcard__torn--top" aria-hidden="true"></div>
+
+                <div class="post-stamp post-stamp--1" aria-hidden="true">
+                  <div class="stamp-inner">
+                    <span class="stamp-val">DRONE</span>
+                    <span class="stamp-sub">OPENCV</span>
+                  </div>
+                </div>
+                <div class="post-cancel-lines" aria-hidden="true"></div>
+
+                <div class="postcard__image-wrap">
+                  <img src="images/project-parkingai.jpg" alt="AI Parking Analytics Aerial Drone Vision"
+                    class="postcard__image" loading="lazy" />
+                  <div class="postcard__glare" aria-hidden="true"></div>
+                </div>
+
+                <div class="postcard__body">
+                  <div class="postcard__meta-row">
+                    <span class="postcard__category">Drone Vision &bull; OpenCV &bull; YOLO</span>
+                    <span class="postcard__date">2025</span>
+                  </div>
+                  <h3 class="postcard__title">AI Parking Drone Analytics</h3>
+                  <p class="postcard__excerpt">
+                    Computer-vision pipeline combining background subtraction, contour detection, and YOLOv8 to
+                    auto-derive parking slots and track vehicle occupancy in drone footage.
+                  </p>
+
+                  <div class="postcard__actions">
+                    <button class="card-btn card-btn--flip" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                        <path d="M21 3v5h-5" />
+                        <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+                        <path d="M3 21v-5h5" />
+                      </svg>
+                      <span>Flip Note ↺</span>
+                    </button>
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                      </svg>
+                      <span>Inspect 3D</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="postcard__torn postcard__torn--bottom" aria-hidden="true"></div>
+              </div>
+
+              <div class="postcard__face postcard__face--back">
+                <div class="postcard-back__header">
+                  <div class="airmail-stripes-bar"></div>
+                  <div class="postcard-back__badge">DISPATCH &bull; AERIAL SPATIAL TELEMETRY</div>
+                </div>
+
+                <div class="postcard-back__grid">
+                  <div class="postcard-back__message">
+                    <p class="handwritten-text">
+                      "Auto-derived parking slot geometries directly from video perspective rather than hardcoded
+                      coordinates. Renders live statistics and occupancy heatmaps on compressed video."
+                    </p>
+                    <div class="handwritten-sig">
+                      &mdash; Aditya Singhal
+                    </div>
+                    <div class="postcard-back__specs">
+                      <span><strong>Tech:</strong> Python, OpenCV, YOLOv8</span>
+                      <span><strong>Innovation:</strong> Dynamic slot geometry extraction</span>
+                    </div>
+                  </div>
+
+                  <div class="postcard-back__postage">
+                    <div class="stamp-box">
+                      <div class="post-stamp post-stamp--vintage">
+                        <span>AERIAL</span>
+                        <strong>YOLO</strong>
+                      </div>
+                      <div class="wax-seal wax-seal--sm">
+                        <span>AS</span>
+                      </div>
+                    </div>
+
+                    <div class="address-lines">
+                      <div class="address-line">To: Smart Infrastructure Division</div>
+                      <div class="address-line">Computer Vision Telemetry</div>
+                      <div class="address-line">Urban Sensing Solutions</div>
+                    </div>
+
+                    <div class="postal-barcode">
+                      || | ||| |||| || | ||||| ||| || ||
+                    </div>
+                  </div>
+                </div>
+
+                <div class="postcard-back__footer">
+                  <button class="card-btn card-btn--flip-back" type="button">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                      <path d="M21 3v5h-5" />
+                    </svg>
+                    <span>Flip to Overview &rarr;</span>
+                  </button>
+                  <div class="postcard-back__footer-links">
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <span>Full 3D Orbit 🔍</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </article>
+          </div>
+
+          <!-- ════ CARD 9: Teevra Generative AI Studio ════ -->
+          <div class="postcard-3d-wrap reveal reveal-delay-2" data-category="genai" id="postcard-wrap-9">
+            <article class="postcard-card" id="postcard-9" tabindex="0" aria-label="Teevra Generative AI Studio Card">
+
+              <div class="postcard__face postcard__face--front">
+                <div class="postcard__torn postcard__torn--top" aria-hidden="true"></div>
+
+                <div class="post-stamp post-stamp--2" aria-hidden="true">
+                  <div class="stamp-inner">
+                    <span class="stamp-val">FLUX</span>
+                    <span class="stamp-sub">GEN-AI</span>
+                  </div>
+                </div>
+                <div class="post-cancel-lines" aria-hidden="true"></div>
+
+                <div class="postcard__image-wrap">
+                  <img src="images/project-teevra.jpg" alt="Teevra Studios Generative AI Pipelines & Microdramas"
+                    class="postcard__image" loading="lazy" />
+                  <div class="postcard__glare" aria-hidden="true"></div>
+                </div>
+
+                <div class="postcard__body">
+                  <div class="postcard__meta-row">
+                    <span class="postcard__category">Generative AI &bull; Media Pipelines</span>
+                    <span class="postcard__date">MAY 2026 – PRESENT</span>
+                  </div>
+                  <h3 class="postcard__title">Teevra Studios — Generative AI</h3>
+                  <p class="postcard__excerpt">
+                    Engineered parameterized generative pipelines across Flux, Midjourney &amp; Higgsfield, directing 7+
+                    AI microdramas with character and scene consistency.
+                  </p>
+
+                  <div class="postcard__actions">
+                    <button class="card-btn card-btn--flip" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                        <path d="M21 3v5h-5" />
+                        <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+                        <path d="M3 21v-5h5" />
+                      </svg>
+                      <span>Flip Note ↺</span>
+                    </button>
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                      </svg>
+                      <span>Inspect 3D</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="postcard__torn postcard__torn--bottom" aria-hidden="true"></div>
+              </div>
+
+              <div class="postcard__face postcard__face--back">
+                <div class="postcard-back__header">
+                  <div class="airmail-stripes-bar"></div>
+                  <div class="postcard-back__badge">DISPATCH &bull; GENERATIVE CINEMATIC DIRECTING</div>
+                </div>
+
+                <div class="postcard-back__grid">
+                  <div class="postcard-back__message">
+                    <p class="handwritten-text">
+                      "Directed end-to-end microdramas using generative video &amp; image pipelines. Engineered
+                      character LoRA consistency across sequential shots and high-volume corporate ad variants."
+                    </p>
+                    <div class="handwritten-sig">
+                      &mdash; Aditya Singhal &bull; Gen AI Artist
+                    </div>
+                    <div class="postcard-back__specs">
+                      <span><strong>Tools:</strong> Flux, Midjourney, Adobe Firefly, Higgsfield</span>
+                      <span><strong>Output:</strong> 7+ Microdrama Formats &amp; Corporate Campaigns</span>
+                    </div>
+                  </div>
+
+                  <div class="postcard-back__postage">
+                    <div class="stamp-box">
+                      <div class="post-stamp post-stamp--vintage">
+                        <span>STUDIO</span>
+                        <strong>GEN-AI</strong>
+                      </div>
+                      <div class="wax-seal wax-seal--sm">
+                        <span>AS</span>
+                      </div>
+                    </div>
+
+                    <div class="address-lines">
+                      <div class="address-line">To: Generative Creative Studios</div>
+                      <div class="address-line">AI Media Engineering &amp; Direction</div>
+                      <div class="address-line">Global Production</div>
+                    </div>
+
+                    <div class="postal-barcode">
+                      |||| || ||| ||||| || | ||| |||| ||
+                    </div>
+                  </div>
+                </div>
+
+                <div class="postcard-back__footer">
+                  <button class="card-btn card-btn--flip-back" type="button">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                      <path d="M21 3v5h-5" />
+                    </svg>
+                    <span>Flip to Overview &rarr;</span>
+                  </button>
+                  <div class="postcard-back__footer-links">
+                    <button class="card-btn card-btn--inspect" type="button">
+                      <span>Full 3D Orbit 🔍</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ EXPERIENCE SECTION ═══ -->
+    <section class="section experience-section" id="experience" aria-label="Professional experience">
+      <div class="section__container">
+        <div class="section__header reveal">
+          <div class="section__badge">CAREER &bull; PRODUCTION ROLES</div>
+          <h2 class="section__title">Work Experience</h2>
+          <p class="section__description">
+            Production engineering experience delivering enterprise web applications, real-time ML inference services,
+            and generative AI creative pipelines.
+          </p>
+        </div>
+
+        <div class="experience-grid">
+          <!-- Role 1: Netpy Technologies -->
+          <div class="exp-card reveal">
+            <div class="exp-card__header">
+              <div class="exp-card__stamp-pill">ENTERPRISE IT</div>
+              <span class="exp-card__period">Aug 2025 &ndash; Aug 2026</span>
+            </div>
+            <h3 class="exp-card__role">AI + Full-Stack Developer Intern</h3>
+            <div class="exp-card__company">
+              <strong>Netpy Technologies</strong> &bull; Bangalore, Karnataka
+            </div>
+            <p class="exp-card__desc">
+              Enterprise IT services firm specializing in custom software, cloud &amp; AI consulting, and mobile apps.
+            </p>
+            <ul class="exp-card__points">
+              <li>Built and deployed <strong>3+ production web applications</strong> for enterprise clients (React +
+                Django REST Framework), integrating machine learning inference pipelines into backend services handling
+                real-time requests.</li>
+              <li>Developed real-time AI features and automated data pipelines end-to-end, plus frontend components
+                visualizing model outputs &mdash; <strong>reducing client manual review cycles by ~35%</strong>.</li>
+              <li>Introduced <strong>Pytest-based automated testing workflows</strong> and GitHub Actions CI/CD
+                pipelines, improving deployment reliability across client-facing products.</li>
+              <li>Collaborated across cloud and AI consulting engagements, gaining production experience in
+                enterprise-grade software delivery.</li>
+            </ul>
+            <div class="exp-card__tech">
+              <span>React</span><span>Django REST</span><span>Python</span><span>ML
+                Inference</span><span>Pytest</span><span>GitHub Actions</span><span>Cloud</span>
+            </div>
+          </div>
+
+          <!-- Role 2: Teevra Studios -->
+          <div class="exp-card reveal reveal-delay-1">
+            <div class="exp-card__header">
+              <div class="exp-card__stamp-pill">STUDIO &bull; REMOTE</div>
+              <span class="exp-card__period">May 2026 &ndash; Present</span>
+            </div>
+            <h3 class="exp-card__role">Generative AI Artist</h3>
+            <div class="exp-card__company">
+              <strong>Teevra Studios</strong> &bull; Remote
+            </div>
+            <p class="exp-card__desc">
+              High-velocity generative media studio creating AI-powered visual assets and episodic digital content for
+              corporate clients.
+            </p>
+            <ul class="exp-card__points">
+              <li>Delivered production-quality visual assets for corporate clients by engineering repeatable,
+                parameterized generative pipelines (Higgsfield, Adobe Firefly, Flux, Midjourney).</li>
+              <li><strong>Shipped 7+ distinct projects</strong> spanning AI-generated microdramas, brand advertisements,
+                and corporate campaign content.</li>
+              <li>Directed end-to-end microdrama production using generative video and image tools, maintaining
+                <strong>character and scene consistency</strong> across sequential shots.
+              </li>
+              <li>Produced ad creatives and campaign variants at speed by building reusable prompt templates and style
+                presets, reducing turnaround time on repeat requests.</li>
+            </ul>
+            <div class="exp-card__tech">
+              <span>Flux</span><span>Midjourney</span><span>Higgsfield</span><span>Adobe Firefly</span><span>Prompt
+                Engineering</span><span>Microdramas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ABOUT & TECHNICAL SKILLS ═══ -->
+    <section class="section about" id="about" aria-label="About Aditya Singhal and technical skills">
+      <div class="section__container">
+        <div class="about__grid">
+          <div class="about__image-wrap reveal">
+            <div class="about__card-3d">
+              <div class="about__torn-badge">ENGINEERING PROFILE</div>
+              <img src="images/project-mentiq.jpg" alt="Aditya Singhal system architecture visual"
+                class="about__image" />
+              <div class="about__card-seal" aria-hidden="true">
+                <span>LPU CSE &bull; MBA</span>
+              </div>
+            </div>
+
+            <!-- Education & Certifications Card -->
+            <div class="education-card" style="margin-top: var(--space-6);">
+              <h4 class="skills-category__title" style="margin-bottom: var(--space-4);">Education &amp; Credentials</h4>
+              <div class="edu-item">
+                <div class="edu-item__degree">B.Tech, Computer Science and Engineering</div>
+                <div class="edu-item__school">Lovely Professional University &bull; CGPA: 7.7 / 10</div>
+                <div class="edu-item__period">Aug 2022 &ndash; Jul 2026 &bull; Phagwara, Punjab</div>
+              </div>
+              <div class="edu-item" style="margin-top: var(--space-4);">
+                <div class="edu-item__degree">MBA, Business Analytics</div>
+                <div class="edu-item__school">Lovely Professional University</div>
+                <div class="edu-item__period">Aug 2026 &ndash; Jul 2028 &bull; Phagwara, Punjab</div>
+              </div>
+              <div class="edu-cert-list" style="margin-top: var(--space-4);">
+                <span class="edu-cert-tag">&bull; Automation Associate Developer (ICT Academy)</span>
+                <span class="edu-cert-tag">&bull; Introduction to IoT (NPTEL)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__content reveal reveal-delay-1">
+            <div class="section__badge">BACKGROUND &bull; SKILLS ARCHITECTURE</div>
+            <h2 class="section__title" style="text-align:left;">Bridging High-Scale Systems<br />with Deep Vision Models
+            </h2>
+
+            <p class="about__text">
+              I am a <strong>Full-Stack and AI-ML Engineer</strong> who thrives at the intersection of robust backend
+              infrastructure and applied machine intelligence. Whether architecting 21-microservice distributed
+              ecosystems sustaining sub-200ms latency or deploying real-time YOLOv8 edge vision pipelines, I build
+              systems engineered for production scale and measurable impact.
+            </p>
+            <p class="about__text">
+              Backed by production experience at <strong>Netpy Technologies</strong> building enterprise client
+              applications and creative generative pipeline engineering at <strong>Teevra Studios</strong>, I bring a
+              unique blend of technical rigor and business analytics acumen to scale-driven engineering teams.
+            </p>
+
+            <!-- Technical Skills Matrix -->
+            <div class="skills-matrix">
+              <div class="skills-category">
+                <div class="skills-category__title">Languages</div>
+                <div class="skills-tags">
+                  <span class="skill-tag">Python</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">TypeScript</span>
+                  <span class="skill-tag">C++</span>
+                  <span class="skill-tag">SQL</span>
+                </div>
+              </div>
+
+              <div class="skills-category">
+                <div class="skills-category__title">Backend &amp; Distributed Systems</div>
+                <div class="skills-tags">
+                  <span class="skill-tag">Django REST Framework</span>
+                  <span class="skill-tag">Node.js/Express</span>
+                  <span class="skill-tag">Microservices</span>
+                  <span class="skill-tag">REST APIs</span>
+                  <span class="skill-tag">Socket.IO / WebSockets</span>
+                  <span class="skill-tag">Celery &amp; Celery Beat</span>
+                  <span class="skill-tag">JWT &amp; OAuth 2.0</span>
+                </div>
+              </div>
+
+              <div class="skills-category">
+                <div class="skills-category__title">Frontend &amp; Mobile</div>
+                <div class="skills-tags">
+                  <span class="skill-tag">React</span>
+                  <span class="skill-tag">Vite</span>
+                  <span class="skill-tag">React Native (Expo)</span>
+                  <span class="skill-tag">TypeScript</span>
+                  <span class="skill-tag">Framer Motion</span>
+                  <span class="skill-tag">PWA Design</span>
+                </div>
+              </div>
+
+              <div class="skills-category">
+                <div class="skills-category__title">AI/ML &amp; Computer Vision</div>
+                <div class="skills-tags">
+                  <span class="skill-tag">TensorFlow</span>
+                  <span class="skill-tag">Keras</span>
+                  <span class="skill-tag">Scikit-learn</span>
+                  <span class="skill-tag">OpenCV</span>
+                  <span class="skill-tag">YOLOv8</span>
+                  <span class="skill-tag">FaceNet</span>
+                  <span class="skill-tag">DeepFace</span>
+                  <span class="skill-tag">Llama 3 &amp; Groq</span>
+                  <span class="skill-tag">Gemini Vision</span>
+                  <span class="skill-tag">NLP</span>
+                </div>
+              </div>
+
+              <div class="skills-category">
+                <div class="skills-category__title">Databases &amp; Caching</div>
+                <div class="skills-tags">
+                  <span class="skill-tag">PostgreSQL</span>
+                  <span class="skill-tag">MongoDB</span>
+                  <span class="skill-tag">Redis</span>
+                  <span class="skill-tag">Elasticsearch</span>
+                  <span class="skill-tag">Firebase</span>
+                  <span class="skill-tag">IndexedDB (idb-keyval)</span>
+                  <span class="skill-tag">Neon Cloud</span>
+                </div>
+              </div>
+
+              <div class="skills-category">
+                <div class="skills-category__title">Cloud &amp; DevOps</div>
+                <div class="skills-tags">
+                  <span class="skill-tag">Docker</span>
+                  <span class="skill-tag">GitHub Actions CI/CD</span>
+                  <span class="skill-tag">Pytest</span>
+                  <span class="skill-tag">Vercel</span>
+                  <span class="skill-tag">Render</span>
+                  <span class="skill-tag">Cloudinary</span>
+                  <span class="skill-tag">Stripe</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats">
+              <div class="stat reveal reveal-delay-1">
+                <div class="stat__number" id="stat-projects">21</div>
+                <div class="stat__label">Microservices</div>
+              </div>
+              <div class="stat reveal reveal-delay-2">
+                <div class="stat__number" id="stat-clients">35</div>
+                <div class="stat__label">% Review Time Saved</div>
+              </div>
+              <div class="stat reveal reveal-delay-3">
+                <div class="stat__number" id="stat-awards">7</div>
+                <div class="stat__label">+ Generative Media Formats</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SERVICES / CORE EXPERTISE ═══ -->
+    <section class="section" id="services" aria-label="Engineering services and core competencies">
+      <div class="section__container">
+        <div class="section__header reveal">
+          <div class="section__badge">COMPETENCIES &bull; VALUE PROPOSITION</div>
+          <h2 class="section__title">What I Bring<br />to Engineering Teams</h2>
+          <p class="section__description">
+            Full-lifecycle technical execution from architecture design to production CI/CD deployments and real-time
+            model integration.
+          </p>
+        </div>
+
+        <div class="services__grid">
+          <!-- Service 1 -->
+          <div class="service-card reveal" id="service-microservices" tabindex="0">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                <path d="m3.27 6.96 8.73 5.05 8.73-5.05" />
+                <path d="M12 22.08V12.01" />
+              </svg>
+            </div>
+            <div class="service-card__num">01</div>
+            <h3 class="service-card__title">Distributed Backend Systems</h3>
+            <p class="service-card__desc">
+              Designing modular microservices, REST APIs with sub-200ms SLAs, Redis caching, Celery asynchronous
+              workers, and resilient PostgreSQL databases.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card reveal reveal-delay-1" id="service-computervision" tabindex="0">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <div class="service-card__num">02</div>
+            <h3 class="service-card__title">Real-Time Computer Vision</h3>
+            <p class="service-card__desc">
+              Building low-latency video pipelines using YOLOv8, OpenCV, FaceNet, and DeepFace for facial recognition,
+              emotion tracking, and aerial drone detection.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card reveal reveal-delay-2" id="service-fullstack" tabindex="0">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect width="20" height="14" x="2" y="3" rx="2" />
+                <line x1="8" x2="16" y1="21" y2="21" />
+                <line x1="12" x2="12" y1="17" y2="21" />
+              </svg>
+            </div>
+            <div class="service-card__num">03</div>
+            <h3 class="service-card__title">Full-Stack &amp; Mobile Web</h3>
+            <p class="service-card__desc">
+              Building responsive SPAs, PWAs, and cross-platform mobile apps (React, React Native Expo, TypeScript,
+              Vite) with offline-first IndexedDB storage.
+            </p>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card reveal reveal-delay-3" id="service-genai" tabindex="0">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+              </svg>
+            </div>
+            <div class="service-card__num">04</div>
+            <h3 class="service-card__title">Generative AI &amp; LLM Pipelines</h3>
+            <p class="service-card__desc">
+              Integrating Groq + Llama 3 tutoring systems, Gemini Vision multi-modal diagnostics, and high-fidelity
+              video/image generative workflows (Flux, Midjourney).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ UNIFIED DISPATCH DESK & CONTACT ═══ -->
+    <section class="section desk-contact-section" id="contact" aria-label="Interactive Dispatch Desk and Contact">
+      <div id="desk" style="position: absolute; top: -100px;" aria-hidden="true"></div>
+
+      <div class="section__container">
+        <div class="section__header reveal">
+          <div class="section__badge">CERTIFIED AIRMAIL DISPATCH &bull; HIRING &bull; COLLABORATION</div>
+          <h2 class="section__title">The Dispatch Desk &amp; Direct Inquiries</h2>
+          <p class="section__description">
+            Compose your inquiry below. Watch your handwritten message appear on the 3D postcard, seal it into an airmail envelope, and click <strong>Dispatch Note</strong> to watch it take flight as a paper plane directly to Aditya Singhal.
+          </p>
+        </div>
+
+        <!-- Quick Connect Credentials Strip -->
+        <div class="dispatch-quick-strip reveal">
+          <a href="mailto:singhaladitya617@gmail.com" class="dispatch-pill" id="quick-email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            <span>singhaladitya617@gmail.com</span>
+          </a>
+          <a href="tel:+917009812679" class="dispatch-pill" id="quick-phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span>+91-7009812679</span>
+          </a>
+          <div class="dispatch-pill dispatch-pill--static" id="quick-location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Ludhiana &bull; Bangalore</span>
+          </div>
+          <a href="https://linkedin.com/in/aditya1803" target="_blank" rel="noopener noreferrer" class="dispatch-pill" id="quick-linkedin">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect width="4" height="12" x="2" y="9" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            <span>LinkedIn Profile ↗</span>
+          </a>
+          <a href="https://github.com/adi-0903" target="_blank" rel="noopener noreferrer" class="dispatch-pill" id="quick-github">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            <span>GitHub Profile ↗</span>
+          </a>
+        </div>
+
+        <div class="desk-grid">
+          <!-- Form Side -->
+          <div class="desk-form-card reveal">
+            <h3 class="desk-form-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                <path d="M2 2l7.586 7.586" />
+                <circle cx="11" cy="11" r="2" />
+              </svg>
+              <span>Compose &amp; Dispatch Certified Note</span>
+            </h3>
+
+            <div class="form__group">
+              <label class="form__label" for="desk-author">Your Full Name &amp; Company / Role</label>
+              <input class="form__input" type="text" id="desk-author"
+                placeholder="e.g. Sarah Jenkins &bull; Scale AI"
+                value="Engineering Talent Lead &bull; Scale AI" required />
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="desk-email">Your Email Address</label>
+              <input class="form__input" type="email" id="desk-email"
+                placeholder="sarah@scale.com"
+                value="sarah.jenkins@scale.com" required />
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="desk-recipient">Opportunity Scope / Topic</label>
+              <input class="form__input" type="text" id="desk-recipient"
+                placeholder="e.g. Software Engineer / AI-ML Engineer Role"
+                value="Software / AI-ML Engineer Opportunity" />
+            </div>
+
+            <div class="form__group">
+              <label class="form__label">Select Vintage Postal Stamp</label>
+              <div class="stamp-picker" id="stamp-picker" role="radiogroup" aria-label="Choose stamp">
+                <button type="button" class="stamp-choice active" data-stamp="gold" aria-checked="true" role="radio">
+                  <span class="stamp-choice__preview stamp-choice--gold"></span>
+                  <span>Solstice Gold ($2.50)</span>
+                </button>
+                <button type="button" class="stamp-choice" data-stamp="terracotta" aria-checked="false" role="radio">
+                  <span class="stamp-choice__preview stamp-choice--terra"></span>
+                  <span>Terra Airmail ($1.80)</span>
+                </button>
+                <button type="button" class="stamp-choice" data-stamp="cobalt" aria-checked="false" role="radio">
+                  <span class="stamp-choice__preview stamp-choice--cobalt"></span>
+                  <span>Nordic Cyan ($3.00)</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="desk-message">Your Handwritten Message</label>
+              <textarea class="form__textarea" id="desk-message"
+                placeholder="Type your message here...">Outstanding engineering portfolio! Your distributed 21-microservices architecture in MentIQ and real-time computer vision systems are exceptional. We'd love to connect regarding an AI/ML Engineer role!</textarea>
+            </div>
+
+            <div class="desk-form-actions">
+              <button class="btn btn--primary" id="stamp-and-mail-btn" type="button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Dispatch &amp; Launch Flight ✈️</span>
+              </button>
+              <button class="btn btn--outline" id="reset-desk-btn" type="button">Reset Desk ↺</button>
+            </div>
+          </div>
+
+          <!-- Live 3D Postcard & Airplane Stage -->
+          <div class="desk-preview-wrap reveal reveal-delay-1">
+            <div class="desk-3d-scene" id="desk-3d-scene">
+
+              <!-- 1. Live 3D Postcard -->
+              <div class="live-postcard" id="live-postcard">
+                <!-- Airmail Border -->
+                <div class="live-postcard__airmail-header">
+                  <div class="airmail-stripes-bar"></div>
+                  <div class="live-postcard__tag">FIRST CLASS AIR MAIL &bull; OFFICIAL TRANSMISSION</div>
+                </div>
+
+                <div class="live-postcard__content">
+                  <!-- Note section -->
+                  <div class="live-postcard__left">
+                    <div class="live-postcard__date-stamp" id="live-date-stamp">OCT 2026</div>
+                    <div class="live-postcard__handwriting" id="live-handwriting">
+                      Outstanding engineering portfolio! Your distributed 21-microservices architecture in MentIQ and real-time computer vision systems are exceptional. We'd love to connect regarding an AI/ML Engineer role!
+                    </div>
+                    <div class="live-postcard__signature" id="live-signature">
+                      &mdash; Engineering Talent Lead &bull; Scale AI
+                    </div>
+                  </div>
+
+                  <!-- Postmark + Stamp + Delivery -->
+                  <div class="live-postcard__right">
+                    <div class="live-postcard__stamp-area">
+                      <div class="live-stamp" id="live-stamp">
+                        <span class="live-stamp__val" id="live-stamp-val">$2.50</span>
+                        <span class="live-stamp__title" id="live-stamp-title">AIR MAIL</span>
+                      </div>
+
+                      <div class="live-postmark" aria-hidden="true">
+                        <svg viewBox="0 0 100 100">
+                          <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="3 2" />
+                          <circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="1.5" />
+                          <text x="50" y="42" text-anchor="middle" font-size="8" font-weight="bold" fill="currentColor">ADITYA.DEV</text>
+                          <text x="50" y="55" text-anchor="middle" font-size="8" fill="currentColor">DISPATCHED</text>
+                          <text x="50" y="68" text-anchor="middle" font-size="7" fill="currentColor">LUDHIANA/BLR</text>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div class="live-wax-seal" id="live-wax-seal" aria-hidden="true">
+                      <div class="live-wax-seal__inner">
+                        <span>AS</span>
+                      </div>
+                    </div>
+
+                    <div class="live-address-box">
+                      <div class="live-address-to">DELIVER TO:</div>
+                      <div class="live-address-line" id="live-recipient-line">Aditya Singhal &bull; Full-Stack &amp; AI</div>
+                      <div class="live-address-line">Enterprise Systems Division</div>
+                      <div class="live-address-line">India / Global Deployment</div>
+                    </div>
+
+                    <div class="live-barcode">
+                      ||| | ||||| | || |||| | ||||| ||| | |||
+                    </div>
+                  </div>
+                </div>
+
+                <div class="live-postcard__torn-edge" aria-hidden="true"></div>
+              </div>
+
+              <!-- 2. 3D Airmail Envelope Target -->
+              <div class="airmail-envelope" id="airmail-envelope" aria-hidden="true">
+                <div class="envelope-border-stripes"></div>
+                <div class="envelope-back"></div>
+                <div class="envelope-pocket"></div>
+                <div class="envelope-flap" id="envelope-flap">
+                  <div class="envelope-wax-seal" id="envelope-wax-seal">
+                    <span>AS</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. 3D Origami Paper Airplane -->
+              <div class="paper-plane" id="paper-plane" aria-hidden="true">
+                <div class="paper-plane__body">
+                  <div class="plane-wing plane-wing--left">
+                    <span class="wing-tip-stripe"></span>
+                  </div>
+                  <div class="plane-wing plane-wing--right">
+                    <span class="wing-tip-stripe"></span>
+                  </div>
+                  <div class="plane-fuselage"></div>
+                </div>
+                <div class="plane-trail" id="plane-trail"></div>
+              </div>
+
+              <!-- 4. Success Confirmation Card -->
+              <div class="dispatch-success-card" id="dispatch-success-card" aria-hidden="true">
+                <div class="success-card__badge-wrap">
+                  <div class="success-card__seal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="success-card__burst"></div>
+                </div>
+
+                <div class="success-card__header">
+                  <span class="success-card__tag">AIRMAIL DISPATCH CONFIRMED</span>
+                  <h3 class="success-card__title">Message Dispatched Successfully!</h3>
+                  <p class="success-card__desc">
+                    Your message was sealed and launched as an airmail paper plane, flying directly to Aditya Singhal.
+                  </p>
+                </div>
+
+                <div class="success-receipt">
+                  <div class="receipt-row">
+                    <span class="receipt-label">Sender</span>
+                    <strong class="receipt-value" id="success-sender">Sarah Jenkins</strong>
+                  </div>
+                  <div class="receipt-row">
+                    <span class="receipt-label">Direct Email</span>
+                    <span class="receipt-value" id="success-email">sarah@scale.com</span>
+                  </div>
+                  <div class="receipt-row">
+                    <span class="receipt-label">Subject Scope</span>
+                    <span class="receipt-value" id="success-scope">AI/ML Engineering Role</span>
+                  </div>
+                  <div class="receipt-row">
+                    <span class="receipt-label">Flight Telemetry</span>
+                    <span class="receipt-value receipt-badge">&bull; In Flight to Aditya Singhal</span>
+                  </div>
+                </div>
+
+                <button type="button" class="btn btn--outline btn--small" id="success-reset-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>
+                  <span>Send Another Note ↺</span>
+                </button>
+              </div>
+
+            </div>
+
+            <p class="desk-hint" id="desk-hint">
+              <strong>Interactive Flight:</strong> Type your note and click "Dispatch &amp; Launch Flight" to watch your postcard glide into the envelope and fly away as a paper plane!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">ADITYA<span>.</span>SINGHAL</span>
+        <span class="footer__tagline">Full-Stack &amp; AI Systems Engineer &bull; Ludhiana &amp; Bangalore</span>
+      </div>
+      <p class="footer__copy">&copy; 2026 Aditya Singhal &bull; B.Tech CSE + MBA Business Analytics &bull; WCAG 2.2 AA
+      </p>
+      <div class="footer__socials" role="list" aria-label="Social media links">
+        <a href="https://github.com/adi-0903" target="_blank" rel="noopener noreferrer" class="footer__social"
+          role="listitem" aria-label="GitHub" id="social-github">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/aditya1803" target="_blank" rel="noopener noreferrer" class="footer__social"
+          role="listitem" aria-label="LinkedIn" id="social-linkedin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect width="4" height="12" x="2" y="9" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+        <a href="mailto:singhaladitya617@gmail.com" class="footer__social" role="listitem" aria-label="Email"
+          id="social-email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect width="20" height="16" x="2" y="4" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ 3D ORBIT INSPECT MODAL ═══ -->
+  <div class="inspect-modal" id="inspect-modal" role="dialog" aria-label="3D Postcard Inspector" aria-hidden="true">
+    <div class="inspect-modal__backdrop" id="inspect-backdrop"></div>
+
+    <div class="inspect-modal__container">
+      <div class="inspect-toolbar">
+        <div class="inspect-title" id="inspect-title">Project Inspector</div>
+        <div class="inspect-actions">
+          <button class="btn btn--small btn--outline" id="inspect-flip-btn" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+              <path d="M21 3v5h-5" />
+              <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+              <path d="M3 21v-5h5" />
+            </svg>
+            <span>Flip Card ↺</span>
+          </button>
+          <button class="btn btn--small btn--outline" id="inspect-reset-btn" type="button">Reset Angle</button>
+          <button class="inspect-close" id="inspect-close" aria-label="Close 3D inspection view">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="inspect-viewport" id="inspect-viewport">
+        <div class="inspect-3d-card" id="inspect-3d-card">
+          <!-- Front Face -->
+          <div class="inspect-face inspect-face--front">
+            <img src="" alt="" id="inspect-img" />
+            <div class="inspect-front-stamp" aria-hidden="true">ADITYA.DEV &bull; ARCHITECTURE</div>
+            <div class="postcard__torn postcard__torn--bottom" aria-hidden="true"></div>
+          </div>
+          <!-- Back Face -->
+          <div class="inspect-face inspect-face--back">
+            <div class="airmail-stripes-bar"></div>
+            <div class="inspect-back-inner">
+              <div class="inspect-back-note" id="inspect-back-note">
+                Architectural notes and engineering benchmarks by Aditya Singhal.
+              </div>
+              <div class="inspect-back-seal">
+                <div class="wax-seal wax-seal--sm"><span>AS</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="inspect-hint" aria-hidden="true">
+          <span>Click &amp; drag to orbit in 3D &bull; Flip to inspect architectural field notes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
